@@ -1,0 +1,3 @@
+pip install django-redis
+pip install mysqlclient
+pip install pycryptodome
