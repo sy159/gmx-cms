@@ -1,4 +1,7 @@
+from __future__ import unicode_literals
+
 import time
+
 from apps.utils.cryption import aes_encrypt
 
 

@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 import os
 from mainsys.settings import APP_ROOT, APPS_CANNOT_INTSALL
 from django.contrib import admin

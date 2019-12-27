@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 import logging
 import os
 import shutil
@@ -7,7 +9,7 @@ from django.core.cache import cache
 
 from mainsys.settings import CACHE_MIDDLEWARE_SECONDS, CACHE_MIDDLEWARE_KEY_PREFIX
 
-add_log = logging.getLogger('my_logger')
+error_log = logging.getLogger('error_logger')
 
 
 def _hashed_key(key: str) -> str:
@@ -46,6 +48,6 @@ def cache_flushdb():
             from django_redis import get_redis_connection
             get_redis_connection("default").flushdb()
     except Exception as e:
-        add_log.error("全站缓存清楚请求异常：" + str(e))
+        error_log.error("全站缓存清楚请求异常：" + str(e))
         return False
     return True

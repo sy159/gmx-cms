@@ -9,24 +9,35 @@ SECRET_KEY = "l*8!si1_0)23jy@+7o68t+&dnz^sc)r^tm0_efh=#=gh45&^ics3452345"
 es_conf = {
     "host": "http://127.0.0.1:9200/",
     "user": "accounts",
-    "password": "123456",
+    "pwd": "123456",
 }
+
 # mq连接配置
 mq_conf = {
-    "host": "http://127.0.0.1:15672/",
-    "user": "accounts",
-    "password": "123456",
+    "host": "192.168.4.203",
+    "port": 5672,
+    "vhost": "test",  # 虚拟主机
+    "user": "admin",
+    "pwd": "zx.123",
+}
+
+# redis连接配置
+redis_conf = {
+    "host": "49.234.18.154",
+    "port": 6380,
+    "db": "1",
+    "pwd": "123456",
 }
 
 # 缓存设置
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://49.234.18.154:6380/0",  # redis地址
+        "LOCATION": "redis://%s" % redis_conf.get("host"),  # redis地址
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "CONNECTION_POOL_KWARGS": {"max_connections": 100},  # 连接池（最大连接数）
-            "PASSWORD": ""
+            "PASSWORD": redis_conf.get("pwd")
         }
     }
 }

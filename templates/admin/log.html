@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<body>
+    <div style="font-size: 14px;margin-bottom: 10px;float: left;width: 100%;
+    line-height:40px;border-bottom: 1px dashed #ccc;">
+        <span style="font-weight: 700;font-size: 16px;">日志: {{ log_name }}</span>
+
+        <div class="result-list-container" style="float: right">
+            <div style="float: left;">
+                查看其它日志:
+            </div>
+            <div class="changelist-actions actions" style="float: right;padding: 4px 10px 0 12px;">
+                <label>
+                    <select name="action">
+                        <option value="" selected="selected">---------</option>
+                        {% for a_log in all_logs %}
+                            <option value="{{ a_log }}">{{ a_log }}</option>
+                        {% endfor %}
+                    </select>
+                </label>
+                <script type="text/javascript">
+                    jQuery(function ($) {
+                        $(".actions select").change(function () {
+                            location = "/core/log/" + $(this).val() + "/100/";
+                        });
+                        $('#side-panel .dropdown-menu-menu a[href="/core/log/uwsgi.log/100/"]').addClass('selected');
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div style="font-size: 14px;color: #999;margin-bottom: 10px;">只提供最新的100行记录，如需查阅全部日志，请直接下载log文件</div>
+    <div id="content-main" style="font-size:13px;line-height:18px">
+        {% for line in lines %}
+            <div>{{ line }}</div>
+        {% endfor %}
+    </div>
+</body>
+</html>

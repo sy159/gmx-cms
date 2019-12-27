@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 import hashlib
 
 from django.shortcuts import render
@@ -11,7 +13,7 @@ from django.core.cache import cache
 
 class RequestMiddleware(MiddlewareMixin):
     def process_request(self, request):
-        url_list = ["/accounts/test/"]  # 不需要做访问频率限制的url
+        url_list = ["/accounts/test/"]  # 需要做访问频率限制的url
         black_ip = []
         if request.path in url_list:
             if request.META.get('HTTP_X_FORWARDED_FOR'):

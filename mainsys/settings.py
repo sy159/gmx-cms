@@ -26,7 +26,6 @@ CACHE_ROOT = os.path.join(BASE_DIR, "cache")
 APP_ROOT = os.path.join(BASE_DIR, "./apps/")
 sys.path.insert(0, APP_ROOT)
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -57,7 +56,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -78,7 +76,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mainsys.wsgi.application'
 
-
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 
@@ -96,7 +93,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 USE_I18N = True  # 国际化(关闭可提高性能),设置为T，LANGUAGE_CODE才可以生效
 TIME_ZONE = "Asia/Shanghai"
@@ -132,7 +128,26 @@ try:
 except ImportError as e:
     if "dbconfig" not in e:
         raise e
+# celery配置(http://docs.celeryproject.org/en/latest/userguide/configuration.html) todo
+'''
+# mq为：amqp://username:passwd@host:port/虚拟主机名；redis：redis://username:passwd@host:port/db
+broker_url = 'amqp://%s:%s@%s:%d/%s' % (mq_conf.get("user"), mq_conf.get("pwd"), mq_conf.get("host"), mq_conf.get("port"), mq_conf.get("vhost"))
+result_backend = 'redis://%s:%d/%s' % (redis_conf.get("host"), redis_conf.get("port"), redis_conf.get("db"))  # 结果存储地址
+task_serializer = 'json'  # 任务序列化方式
+result_serializer = 'json'  # 任务执行结果序列化方式
+accept_content = ["json"]  # 指定任务接受的内容类型
+enable_utc = True  # 启动时区设置
+timezone = 'Asia/Shanghai'
+C_FORCE_ROOT = True
+result_compression = 'zlib'  # # 压缩方案选择，可以是zlib, bzip2，默认是发送没有压缩的数据
+result_expires = 60 * 60 * 24  # 任务结果过期时间(结果最长保存时间),celery任务执行结果的超时时间
+task_time_limit = 60 * 30  # 在30分钟内完成单个任务，否则执行该任务的worker将被杀死，任务移交给父进程
+worker_max_tasks_per_child = 200  # 每个worker执行了多少任务就会死掉，默认是无限的(可防止内存泄露)
+worker_prefetch_multiplier = 2  # celery worker 每次去rabbitmq预取任务的数量(默认值4)
+# worker_concurrency = 4  # celery worker的并发数，默认是服务器的内核数目,也是命令行-c参数指定的数目
+'''
 
+# 日志配置
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,  # 是否禁用logger
@@ -194,23 +209,23 @@ LOGGING = {
         'error': {
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',  # 保存到文件，根据文件大小自动切
-            'filename':  'mainsys/logs/error.log',  # 日志文件名
+            'filename': 'mainsys/logs/error.log',  # 日志文件名
             'maxBytes': 1024 * 1024 * 20,  # 日志大小 20M
             'backupCount': 5,  # 保留的日志份数，默认为0表示都保存
             'formatter': 'simple',  # 选用格式化样式
             'encoding': 'utf-8'
         },
-         'debug': {
+        'debug': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename':  'mainsys/logs/debug.log',
+            'filename': 'mainsys/logs/debug.log',
             'formatter': 'simple',
             'encoding': 'utf-8'
         },
         'search': {
             'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename':  'mainsys/logs/search.log',
+            'filename': 'mainsys/logs/search.log',
             'maxBytes': 1024 * 1024 * 50,
             'backupCount': 10,
             'formatter': 'simple',

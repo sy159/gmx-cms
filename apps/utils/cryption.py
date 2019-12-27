@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 import base64
 
 from Crypto.Cipher import AES

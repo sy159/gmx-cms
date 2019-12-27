@@ -1,3 +1,5 @@
-pip install django-redis
-pip install mysqlclient
-pip install pycryptodome
+django-redis==4.11.0
+mysqlclient==1.4.6
+pycryptodome==3.9.4
+# celery==4.4.0
+pika==1.1.0
