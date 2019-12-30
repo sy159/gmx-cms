@@ -79,7 +79,7 @@ class RabbitPublisher(object):
 
 # 异步消息消费类
 class RabbitConsumer(object):
-    # 消费异常默认的exchange设置
+    # 消费异常默认的exchange设置（跟消费队列进行绑定配置）
     EXCHANGE = 'amq.direct'
     EXCHANGE_TYPE = 'direct'
 
