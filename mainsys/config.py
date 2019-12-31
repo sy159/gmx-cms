@@ -11,6 +11,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*", ]
 
+SITE_HEADER = "后台管理系统"
+
 # session设置
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'  # session存储位置（默认是db）
 SESSION_SAVE_EVERY_REQUEST = True  # SESSION_COOKIE_AGE 和 SESSION_EXPIRE_AT_BROWSER_CLOSE 这两个参数只有在 SESSION_SAVE_EVERY_REQUEST 为 True 时才有效

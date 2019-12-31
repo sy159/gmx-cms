@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+from apps.core.utils import sys_information
 
 
 def site_settings(request=None):
@@ -28,3 +29,8 @@ def site_settings(request=None):
         }
     # 前端模板获取{{ settings.QQ }}
     return {"settings": setting}
+
+
+# 服务器信息
+def sys_info(request=None):
+    return sys_information()

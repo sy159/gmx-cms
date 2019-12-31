@@ -33,11 +33,11 @@ redis_conf = {
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://%s" % redis_conf.get("host"),  # redis地址
+        "LOCATION": "redis://%s:%d/%s" % (redis_conf.get("host"), redis_conf.get("port"), redis_conf.get("db")),  # redis地址
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "CONNECTION_POOL_KWARGS": {"max_connections": 100},  # 连接池（最大连接数）
-            "PASSWORD": redis_conf.get("pwd")
+            # "PASSWORD": redis_conf.get("pwd")
         }
     }
 }

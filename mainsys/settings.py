@@ -1,6 +1,18 @@
 import os
 import sys
 
+# 管理后台界面管理(https://newpanjing.github.io/simpleui/QUICK.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8F%9C%E5%8D%95)
+SIMPLEUI_HOME_INFO = True  # 服务器信息
+SIMPLEUI_HOME_QUICK = True  # 快速操作
+SIMPLEUI_HOME_ACTION = True  # 最近动作
+
+ADMIN_MENU_ORDER = (
+    ("用户中心",
+     ("auth.User",)),
+    ("网站管理",
+     ("core.WebSettings",)),
+)
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -29,6 +41,7 @@ sys.path.insert(0, APP_ROOT)
 # Application definition
 
 INSTALLED_APPS = [
+    'simpleui',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -69,6 +82,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'apps.context_processors.site_settings',
+                'apps.context_processors.sys_info',
             ],
         },
     },

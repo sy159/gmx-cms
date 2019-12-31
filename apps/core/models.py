@@ -7,6 +7,7 @@ from django.db import models
 class WebSettings(models.Model):
     DEBUG = models.CharField('是否启用调试', null=True, max_length=5, default='True', choices=(('False', "否"), ('True', "是")))
     ALLOWED_HOSTS = models.CharField('授权的域名', max_length=200, null=True, default="*", help_text="多个用','分隔")
+    SITE_HEADER = models.CharField('后台头部', max_length=200, null=True, default="后台管理系统")
     # 如果开起UpdateCacheMiddleware，FetchFromCacheMiddleware作为全站缓存使用
     CACHE_MIDDLEWARE_SECONDS = models.IntegerField("缓存时间", default=900, null=True, help_text="全站缓存的默认时间(需要加入cache中间件)，单位：秒")
     CACHE_MIDDLEWARE_KEY_PREFIX = models.CharField("缓存前缀", max_length=20, null=True, default="gmx", help_text="缓存key前缀")
@@ -18,7 +19,7 @@ class WebSettings(models.Model):
     EMAIL_SUBJECT_PREFIX = models.CharField('邮件标题的前缀', max_length=20, null=True, blank=True, default="")
     EMAIL_HOST_USER = models.CharField("发件邮箱", blank=True, null=True, max_length=50, default="")
     EMAIL_HOST_PASSWORD = models.CharField('发件邮箱密码', blank=True, null=True, max_length=20, default="", help_text="163邮箱使用授权码")
-    EMAIL_USE_TLS = models.CharField('是否开启安全链接', max_length=5, blank=True, null=True, default="True", choices=(("False", "否"), ("True", "是")))
+    EMAIL_USE_TLS = models.CharField('是否开启安全链接', max_length=5, null=True, default="True", choices=(("False", "否"), ("True", "是")))
 
     class Meta:
         verbose_name = '开发者选项'
@@ -26,7 +27,7 @@ class WebSettings(models.Model):
         db_table = 'web_settings'
 
     def __str__(self):
-        return '开发者选项'
+        return '站点全局配置'
 
     def save(self, *args, **kwargs):
         if self.id:  # 添加新配置（更新没有self.id）,只留一个配置
@@ -47,6 +48,8 @@ DEBUG = %s
 
 ALLOWED_HOSTS = [%s]
 
+SITE_HEADER = '%s'
+
 # session设置
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'  # session存储位置（默认是db）
 SESSION_SAVE_EVERY_REQUEST = True  # SESSION_COOKIE_AGE 和 SESSION_EXPIRE_AT_BROWSER_CLOSE 这两个参数只有在 SESSION_SAVE_EVERY_REQUEST 为 True 时才有效
@@ -62,7 +65,7 @@ EMAIL_HOST_PASSWORD = '%s'  # 授权码
 EMAIL_SUBJECT_PREFIX = '%s'  # 为邮件标题的前缀,默认是'[django]'
 EMAIL_USE_TLS = %s  # 开启安全链接
 DEFAULT_FROM_EMAIL = SERVER_EMAIL = EMAIL_HOST_USER  # 设置发件人
-''' % (str(self.FILE_UPLOAD_MAX_MEMORY_SIZE), str(self.CACHE_MIDDLEWARE_SECONDS), self.CACHE_MIDDLEWARE_KEY_PREFIX, self.DEBUG, ALLOWED_HOSTS,
+''' % (str(self.FILE_UPLOAD_MAX_MEMORY_SIZE), str(self.CACHE_MIDDLEWARE_SECONDS), self.CACHE_MIDDLEWARE_KEY_PREFIX, self.DEBUG, ALLOWED_HOSTS, self.SITE_HEADER,
        str(self.SESSION_COOKIE_SECONDS), self.SESSION_EXPIRE_AT_BROWSER_CLOSE, self.EMAIL_HOST, str(self.EMAIL_PORT), self.EMAIL_HOST_USER,
        self.EMAIL_HOST_PASSWORD, self.EMAIL_SUBJECT_PREFIX, self.EMAIL_USE_TLS)
         with open("mainsys/config.py", "w", encoding="utf-8") as f:
@@ -74,13 +77,13 @@ DEFAULT_FROM_EMAIL = SERVER_EMAIL = EMAIL_HOST_USER  # 设置发件人
 # 站点配置
 class SiteSetting(models.Model):
     SITE_HOST = models.CharField('站点域名', max_length=50, null=True)
-    SITE_NAME = models.CharField('系统名称', max_length=50, null=True, default='如何好听')
-    COMPANY_NAME = models.CharField('公司名称', max_length=50, null=True, default='如何好听')
-    COMPANY_INFO = models.CharField('公司简介', max_length=50, null=True, default='猪猪女孩')
-    COMPANY_ADDRESS = models.CharField('公司地址', max_length=50, null=True, default='重庆市')
-    COMPANY_ICP = models.CharField('公司ipc备案号', max_length=50, null=True)
-    QQ = models.CharField('客服QQ', max_length=15, null=True, default='1138559515')
-    TEL = models.CharField('联系方式', max_length=15, null=True, default='187****2553')
+    SITE_NAME = models.CharField('系统名称', max_length=50, null=True, blank=True, default='如何好听')
+    COMPANY_NAME = models.CharField('公司名称', max_length=50, null=True, blank=True, default='如何好听')
+    COMPANY_INFO = models.CharField('公司简介', max_length=50, null=True, blank=True, default='猪猪女孩')
+    COMPANY_ADDRESS = models.CharField('公司地址', max_length=50, null=True, blank=True, default='重庆市')
+    COMPANY_ICP = models.CharField('公司ipc备案号', max_length=50, null=True, blank=True)
+    QQ = models.CharField('客服QQ', max_length=15, null=True, blank=True, default='1138559515')
+    TEL = models.CharField('联系方式', max_length=15, null=True, blank=True, default='187****2553')
 
     class Meta:
         verbose_name = '多域名设置'

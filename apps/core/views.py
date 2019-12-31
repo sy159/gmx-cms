@@ -35,7 +35,7 @@ def log_view(request, log_name, row_num):
                 if each_log != "index.html" and os.path.isfile(os.path.join(log_dir, each_log)):
                     all_logs.append(each_log)
             context = {"lines": reversed(lines), "log_name": log_name, "all_logs": all_logs}
-            return render(request, "admin/log.html", context)
+            return render(request, "admin/../../templates/log.html", context)
         else:
             raise Http404
     else:
