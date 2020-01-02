@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb749b6-6d00-4eea-bd31-2844198fe685" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/core/templatetags/simpletags.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/core/admin.py" afterPath="$PROJECT_DIR$/apps/core/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/core/models.py" afterPath="$PROJECT_DIR$/apps/core/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/core/urls.py" afterPath="$PROJECT_DIR$/apps/core/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainsys/settings.py" afterPath="$PROJECT_DIR$/mainsys/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/core/templatetags/simpletags.py" afterPath="$PROJECT_DIR$/apps/core/templatetags/simpletags.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/index.html" afterPath="$PROJECT_DIR$/templates/admin/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,100 +48,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="rabbitmq.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/utils/rabbitmq.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="411" column="3" lean-forward="true" selection-start-line="411" selection-start-column="3" selection-end-line="411" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#39#0" expanded="false" />
-                <element signature="e#130#2885#0" expanded="false" />
-                <element signature="e#193#619#0" expanded="false" />
-                <element signature="e#653#763#0" expanded="false" />
-                <element signature="e#890#1218#0" expanded="false" />
-                <element signature="e#1067#1212#0" expanded="false" />
-                <element signature="e#1323#1695#0" expanded="false" />
-                <element signature="e#1791#2433#0" expanded="false" />
-                <element signature="e#2495#2532#0" expanded="false" />
-                <element signature="e#2622#2700#0" expanded="false" />
-                <element signature="e#2741#2885#0" expanded="false" />
-                <element signature="e#2929#15758#0" expanded="false" />
-                <element signature="e#3132#3651#0" expanded="false" />
-                <element signature="e#3684#4124#0" expanded="false" />
-                <element signature="e#4166#4327#0" expanded="false" />
-                <element signature="e#4391#4716#0" expanded="false" />
-                <element signature="e#4391#4688#1" expanded="false" />
-                <element signature="e#4791#5032#0" expanded="false" />
-                <element signature="e#4791#5007#1" expanded="false" />
-                <element signature="e#5106#5616#0" expanded="false" />
-                <element signature="e#5106#5475#1" expanded="false" />
-                <element signature="e#5651#5865#0" expanded="false" />
-                <element signature="e#5651#5808#1" expanded="false" />
-                <element signature="e#5903#6182#0" expanded="false" />
-                <element signature="e#5903#6110#1" expanded="false" />
-                <element signature="e#6232#6635#0" expanded="false" />
-                <element signature="e#6232#6515#1" expanded="false" />
-                <element signature="e#6690#6885#0" expanded="false" />
-                <element signature="e#6690#6817#1" expanded="false" />
-                <element signature="e#6945#7421#0" expanded="false" />
-                <element signature="e#6945#7389#1" expanded="false" />
-                <element signature="e#7476#8163#0" expanded="false" />
-                <element signature="e#7476#7740#1" expanded="false" />
-                <element signature="e#7749#7817#0" expanded="false" />
-                <element signature="e#8235#8521#0" expanded="false" />
-                <element signature="e#8235#8484#1" expanded="false" />
-                <element signature="e#8570#8978#0" expanded="false" />
-                <element signature="e#8570#8820#1" expanded="false" />
-                <element signature="e#9047#9770#0" expanded="false" />
-                <element signature="e#9047#9520#1" expanded="false" />
-                <element signature="e#9830#10141#0" expanded="false" />
-                <element signature="e#9830#10118#1" expanded="false" />
-                <element signature="e#10174#10581#0" expanded="false" />
-                <element signature="e#10174#10468#1" expanded="false" />
-                <element signature="e#10637#10972#0" expanded="false" />
-                <element signature="e#10637#10941#1" expanded="false" />
-                <element signature="e#11013#11715#0" expanded="false" />
-                <element signature="e#11013#11513#1" expanded="false" />
-                <element signature="e#11763#12037#0" expanded="false" />
-                <element signature="e#11763#11964#1" expanded="false" />
-                <element signature="e#12098#12336#0" expanded="false" />
-                <element signature="e#12098#12276#1" expanded="false" />
-                <element signature="e#12422#13233#0" expanded="false" />
-                <element signature="e#12422#13070#1" expanded="false" />
-                <element signature="e#13292#13542#0" expanded="false" />
-                <element signature="e#13292#13496#1" expanded="false" />
-                <element signature="e#13582#13885#0" expanded="false" />
-                <element signature="e#13582#13697#1" expanded="false" />
-                <element signature="e#13736#13885#0" expanded="false" />
-                <element signature="e#13947#14439#0" expanded="false" />
-                <element signature="e#13947#14378#1" expanded="false" />
-                <element signature="e#14478#14620#0" expanded="false" />
-                <element signature="e#14478#14590#1" expanded="false" />
-                <element signature="e#14649#14885#0" expanded="false" />
-                <element signature="e#14649#14803#1" expanded="false" />
-                <element signature="e#14915#15758#0" expanded="false" />
-                <element signature="e#14915#15509#1" expanded="false" />
-                <element signature="e#15552#15758#0" expanded="false" />
-                <element signature="e#15621#15690#0" expanded="false" />
-                <element signature="e#15814#17273#0" expanded="false" />
-                <element signature="e#15936#16385#0" expanded="false" />
-                <element signature="e#16414#16613#0" expanded="false" />
-                <element signature="e#16438#16613#0" expanded="false" />
-                <element signature="e#16534#16577#0" expanded="false" />
-                <element signature="e#16655#16986#0" expanded="false" />
-                <element signature="e#16703#16986#0" expanded="false" />
-                <element signature="e#17032#17270#0" expanded="false" />
-                <element signature="e#17543#17875#1" expanded="false" />
-              </folding>
+            <state relative-caret-position="249">
+              <caret line="188" column="111" lean-forward="false" selection-start-line="188" selection-start-column="111" selection-end-line="188" selection-end-column="111" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="189" column="59" lean-forward="false" selection-start-line="189" selection-start-column="59" selection-end-line="189" selection-end-column="59" />
+            <state relative-caret-position="275">
+              <caret line="46" column="15" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/core/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -165,8 +91,8 @@
       <file leaf-file-name="simpletags.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/core/templatetags/simpletags.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1764">
-              <caret line="267" column="4" lean-forward="false" selection-start-line="267" selection-start-column="4" selection-end-line="267" selection-end-column="4" />
+            <state relative-caret-position="-1376">
+              <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -234,7 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cb</find>
       <find>_prefetch_count</find>
       <find>todo</find>
       <find>LOGGER</find>
@@ -264,6 +189,7 @@
       <find>list_display</find>
       <find>name</find>
       <find>menus</find>
+      <find>icon</find>
     </findStrings>
     <replaceStrings>
       <replace>text</replace>
@@ -327,8 +253,8 @@
         <option value="$PROJECT_DIR$/apps/accounts/__init__.py" />
         <option value="$PROJECT_DIR$/apps/core/__init__.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/apps/core/templatetags/simpletags.py" />
         <option value="$PROJECT_DIR$/mainsys/settings.py" />
+        <option value="$PROJECT_DIR$/apps/core/templatetags/simpletags.py" />
         <option value="$PROJECT_DIR$/templates/admin/index.html" />
       </list>
     </option>
@@ -440,7 +366,147 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templatetags" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gmx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.8.0 (C:\Python38\python3.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site-packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simpleui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simpleui-x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gmx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.8.0 (C:\Python38\python3.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site-packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simpleui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simpleui-x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gmx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.8.0 (C:\Python38\python3.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site-packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simpleui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simpleui-x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elementui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gmx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.8.0 (C:\Python38\python3.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site-packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simpleui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1026,22 +1092,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python38/Lib/site-packages/django/contrib/auth/validators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python38/Lib/site-packages/django/contrib/auth/password_validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python38/Lib/site-packages/django/contrib/auth/base_user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="733">
@@ -1489,18 +1539,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/core/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/core/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="46" column="15" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/core/templatetags/simpletags.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="267" column="4" lean-forward="false" selection-start-line="267" selection-start-column="4" selection-end-line="267" selection-end-column="4" />
+        <state relative-caret-position="-1376">
+          <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="189" column="59" lean-forward="false" selection-start-line="189" selection-start-column="59" selection-end-line="189" selection-end-column="59" />
+        <state relative-caret-position="249">
+          <caret line="188" column="111" lean-forward="false" selection-start-line="188" selection-start-column="111" selection-end-line="188" selection-end-column="111" />
           <folding />
         </state>
       </provider>

@@ -188,7 +188,8 @@ def menus(context, _get_config=None):
         config = _import_reload(_get_config('DJANGO_SETTINGS_MODULE')).SIMPLEUI_CONFIG
 
     app_list = context.get('app_list')
-    print(app_list)
+    from mainsys.settings import ADMIN_MENU_DICT
+    get_name = lambda x:ADMIN_MENU_DICT.get(x, "")
     for app in app_list:
         _models = [
             {
@@ -197,8 +198,8 @@ def menus(context, _get_config=None):
                 'url': m.get('admin_url'),
                 'addUrl': m.get('add_url'),
                 'breadcrumbs': [{
-                    'name': app.get('name'),
-                    'icon': get_icon(app.get('app_label'), app.get('name'))
+                    'name': get_name(app.get('name')) or app.get('name'),
+                    'icon': get_icon(app.get('app_label'), get_name(app.get('name')) or app.get('name'))
                 }, {
                     'name': m.get('name'),
                     'icon': get_icon(m.get('object_name'), unicode_to_str(m.get('name')))
@@ -207,8 +208,6 @@ def menus(context, _get_config=None):
 
             for m in app.get('models')
         ] if app.get('models') else []
-        from mainsys.settings import ADMIN_MENU_DICT
-        get_name = lambda x:ADMIN_MENU_DICT.get(x, "")
         module = {
             'name': get_name(app.get('name')) or app.get('name'),
             'icon': get_icon(app.get('app_label'), get_name(app.get('name')) or app.get('name')),

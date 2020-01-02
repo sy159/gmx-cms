@@ -171,7 +171,7 @@
                                 </el-breadcrumb>
                             {% endblock %}
                         </div>
-
+                        {#导航栏配置#}
                         <div class="right">
 {#                            <el-button icon="fas fa-font" circle v-waves @click="fontClick()"></el-button>#}
 
@@ -184,10 +184,10 @@
                                     <span v-text="getLanuage('Change theme')"></span><i
                                         class="el-icon-arrow-down el-icon--right"></i>
                                 </el-button>
-
                             {% endverbatim mycode %}
-                         <el-button icon="fas fa-home" @click="goIndex('{{ 'SIMPLEUI_INDEX'|get_config }}')" circle
-                                       v-waves></el-button>
+                        {#                         el-icon-document#}
+                        <el-button icon="el-icon-circle-close" onclick="window.location.href='/core/delcache/'">清除缓存</el-button>
+                         <el-button icon="fas fa-home" @click="goIndex('{{ 'SIMPLEUI_INDEX'|get_config }}')" circlev-waves>返回首页</el-button>
                             <el-dropdown>
                                 <el-button v-waves>
                                     <i class="fas fa-user"></i>
