@@ -5,13 +5,10 @@ import sys
 SIMPLEUI_HOME_INFO = True  # 服务器信息
 SIMPLEUI_HOME_QUICK = True  # 快速操作
 SIMPLEUI_HOME_ACTION = True  # 最近动作
-
-ADMIN_MENU_ORDER = (
-    ("用户中心",
-     ("auth.User",)),
-    ("网站管理",
-     ("core.WebSettings",)),
-)
+# 后台菜单栏映射表（app的首字母大写）
+ADMIN_MENU_DICT = {
+    "Core": "网站管理",
+}
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
