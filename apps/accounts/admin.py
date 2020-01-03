@@ -1,8 +1,8 @@
-from django.contrib.auth.models import User, Group
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import Group
 
 from apps.accounts.models import *
-
 
 if User in admin.site._registry:
     admin.site.unregister(User)
@@ -16,6 +16,7 @@ class UserInfoInline(admin.StackedInline):
     can_delete = False  # 嵌入不可删除
     readonly_fields = ["created", "tel"]  # 只读字段
     raw_id_fields = ["userid"]  # 单对多关系的选择
+
     # filter_horizontal = ("userid",)  # 多对多关系的选择
 
     # 设置只读函数
@@ -26,8 +27,8 @@ class UserInfoInline(admin.StackedInline):
 
 
 @admin.register(User)
-class UserInfoAdmin(admin.ModelAdmin):
-    fieldsets = (("用户信息", {"fields": ["username", "last_login", "date_joined"]}),
+class UserInfoAdmin(UserAdmin):
+    fieldsets = (("用户信息", {"fields": ["username", "password", "last_login", "date_joined"]}),
                  ("后台权限", {"fields": ["is_active", "is_staff", "is_superuser"]}),
                  )
     list_display = ["id", "username", "get_tel", "is_active"]

@@ -1,7 +1,9 @@
-from apps.core.models import *
 from django.contrib import admin
 
+from apps.core.models import *
 
+
+@admin.register(WebSettings)
 class WebSettingsAdmin(admin.ModelAdmin):
     fieldsets = (("基础设置", {"fields": ["DEBUG", "ALLOWED_HOSTS", "FILE_UPLOAD_MAX_MEMORY_SIZE", "SITE_HEADER"]}),
                  ("缓存及session设置", {"fields": ["CACHE_MIDDLEWARE_SECONDS", "CACHE_MIDDLEWARE_KEY_PREFIX", "SESSION_COOKIE_SECONDS", "SESSION_EXPIRE_AT_BROWSER_CLOSE"]}),
@@ -26,6 +28,7 @@ class WebSettingsAdmin(admin.ModelAdmin):
         return False
 
 
+@admin.register(SiteSetting)
 class SiteSettingAdmin(admin.ModelAdmin):
     fieldsets = (("站点信息", {"fields": ["SITE_HOST", "SITE_NAME"]}),
                  ("公司信息", {"fields": ["COMPANY_NAME", "COMPANY_INFO", "COMPANY_ADDRESS", "COMPANY_ICP", "QQ", "TEL"]}),
@@ -45,6 +48,3 @@ class SiteSettingAdmin(admin.ModelAdmin):
         if request.user.username in ["root", ]:
             return qs
         return qs.filter(SITE_HOST=request.get_host())
-
-admin.site.register(WebSettings, WebSettingsAdmin)
-admin.site.register(SiteSetting, SiteSettingAdmin)

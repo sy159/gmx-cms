@@ -1,0 +1,76 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统日志</title>
+    <style>
+
+select {
+    /*清除select默认样式*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -ms-appearance:none;
+    border:1px solid #E5E5E5;
+    width:100px;
+    height:26px;
+    /*自定义箭头的样式，记得背景一定要加 白色或其他*/
+    background-color: #fff;
+{#    background-image: url("/static/xiaoxiao/img/down.png");#}
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 178px 7px;
+    background-size: 14px 10px;
+    /*background:url("/static/xiaoxiao/img/down.png") no-repeat scroll right center #fff;*/
+    /*ie下,原默认的箭头样式还是会显示，所以这里把自定义的样式给去除了*/
+    background:#fff\9;
+    color:#666;
+    outline:none;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+    </style>
+<script src="{% static '/admin/js/vendor/jquery/jquery.min.js' %}"></script>
+</head>
+{#{% extends "admin/base_site.html" %}#}
+<body>
+    <div style="font-size: 14px;margin-bottom: 10px;float: left;width: 100%;
+    line-height:40px;border-bottom: 1px dashed #ccc;">
+        <span style="font-weight: 600;font-size: 17px;">日志: {{ log_name }}</span>
+
+        <div style="float: right">
+            <div style="float: left;">
+                查看其它日志:
+            </div>
+            <div class="actions" style="float: right;padding: 4px 10px 0 14px;">
+                <label>
+                    <select name="action">
+                        <option value="" selected="selected">---{{ log_name }}---</option>
+                        {% for a_log in all_logs %}
+                            {% if a_log != log_name %}
+                            <option value="{{ a_log }}">{{ a_log }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </label>
+                <script type="text/javascript">
+                    jQuery(function ($) {
+                        $(".actions select").change(function () {
+                            location = "/core/log/" + $(this).val() + "/100/";
+                        });
+                        $('#side-panel .dropdown-menu-menu a[href="/core/log/uwsgi.log/100/"]').addClass('selected');
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div style="font-size: 14px;color: #999;margin-bottom: 10px;">只提供最新的100行记录，如需查阅全部日志，请直接下载log文件</div>
+    <div id="content-main" style="font-size:14px;line-height:18px">
+        {% for line in lines %}
+            <div style="margin-top: 7px; color: #656565">{{ line }}</div>
+        {% endfor %}
+    </div>
+</body>
+</html>

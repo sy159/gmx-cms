@@ -189,7 +189,7 @@ def menus(context, _get_config=None):
 
     app_list = context.get('app_list')
     from mainsys.settings import ADMIN_MENU_DICT
-    get_name = lambda x:ADMIN_MENU_DICT.get(x, "")
+    get_name = lambda x: ADMIN_MENU_DICT.get(x, "")
     for app in app_list:
         _models = [
             {
@@ -207,12 +207,25 @@ def menus(context, _get_config=None):
             }
 
             for m in app.get('models')
-        ] if app.get('models') else []
+            ] if app.get('models') else []
         module = {
             'name': get_name(app.get('name')) or app.get('name'),
             'icon': get_icon(app.get('app_label'), get_name(app.get('name')) or app.get('name')),
             'models': _models
         }
+        # 网站管理加入系统日志功能
+        if app.get("name") == "Core":
+            module.get("models", []).insert(0,
+                {
+                    "name": "系统日志",
+                    "icon": "el-icon-document",
+                    "url": "/core/log/error.log/100/",
+                    "breadcrumbs": [
+                        {"name": "网站管理", "icon": "far fa-file"},
+                        # {"name": "网站管理", "icon": "el-icon-document"},
+                        {"name": "系统日志", "icon": "el-icon-document"}
+                    ]
+                }, )
         data.append(module)
 
     # 如果有menu 就读取，没有就调用系统的
