@@ -5,6 +5,11 @@ import time
 from apps.utils.cryption import aes_encrypt
 
 
+def add_salt(text: str) -> str:
+    salt = "gmx."
+    return salt + text
+
+
 def get_sign(user: str, pwd: str) -> str:
     return aes_encrypt.encrypt("%s|%s|%s" % (user, pwd, str(time.time())))
 
