@@ -45,10 +45,10 @@ class LazyEncoder(DjangoJSONEncoder):
         return super(LazyEncoder, self).default(obj)
 
 
-@register.simple_tag(takes_context=True)
-def context_test(context):
-    print(context)
-    pass
+# @register.simple_tag(takes_context=True)
+# def context_test(context):
+#     # print(context)
+#     pass
 
 
 # context.get('cl').filter_specs[1].links
@@ -97,11 +97,11 @@ def get_date_type(spec):
     return field_type
 
 
-@register.filter
-def test(obj):
-    print(obj)
-    # pass
-    return ''
+# @register.filter
+# def test(obj):
+#     print(obj)
+#     # pass
+#     return ''
 
 
 @register.filter
