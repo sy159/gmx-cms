@@ -2,9 +2,566 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb749b6-6d00-4eea-bd31-2844198fe685" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Bold-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Light-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Regular-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-brands-400.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-brands-400.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-brands-400.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-brands-400.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-regular-400.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-regular-400.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-regular-400.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-regular-400.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/img/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/img/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/autocomplete.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/changelists.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/dashboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/fonts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/forms.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/login.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/responsive_rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/LICENSE-SELECT2.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/widgets.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/fonts/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/fonts/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_off.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-no.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/search.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/SelectBox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/actions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/actions.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/autocomplete.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/calendar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/cancel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/change_form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/collapse.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/inlines.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/inlines.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/jquery.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/popup_response.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/timeparse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/urlify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/LICENSE-SELECT2.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/az.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/km.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/mk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt-BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/automatic/dicts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/automatic/segment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/css/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/css/base.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/css/base.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/css/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/css/index.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/css/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/css/login.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/alert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/aside.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/autocomplete.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/avatar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/backtop.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/badge.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/breadcrumb-item.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/breadcrumb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/button-group.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/button.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/calendar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/card.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/carousel-item.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/cascader-panel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/cascader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/checkbox-button.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/checkbox-group.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/checkbox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/col.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/collapse-item.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/color-picker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/container.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/date-picker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/dialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/directives/mousewheel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/directives/repeat-click.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/divider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/drawer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/dropdown-item.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/dropdown-menu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/element-ui.common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/footer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/form-item.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/header.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/icon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/infinite-scroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/input-number.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/input.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/link.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/loading.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/format.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/af-ZA.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/cs-CZ.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ee.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/hy-AM.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/kg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/km.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ku.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/kz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/mn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/nb-NO.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ru-RU.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/sv-SE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ta.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/tk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/tr-TR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/ug-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/uz-UZ.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/locale/lang/zh-TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/menu-item-group.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/menu-item.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/menu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/message-box.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/message.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/mixins/emitter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/mixins/focus.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/mixins/locale.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/mixins/migrating.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/notification.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/option-group.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/option.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/page-header.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/pagination.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/popover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/progress.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/radio-button.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/radio-group.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/radio.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/rate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/row.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/scrollbar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/select.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/spinner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/step.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/steps.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/submenu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/switch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/tab-pane.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/table-column.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/table.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/tabs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/tag.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/alert.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/aside.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/autocomplete.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/avatar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/backtop.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/badge.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/breadcrumb-item.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/breadcrumb.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/button-group.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/button.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/calendar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/card.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/carousel-item.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/carousel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/cascader-panel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/cascader.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/checkbox-button.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/checkbox-group.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/checkbox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/col.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/collapse-item.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/collapse.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/color-picker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/container.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/date-picker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/dialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/display.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/divider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/drawer.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/dropdown-item.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/dropdown-menu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/dropdown.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/footer.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/form-item.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/form.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/header.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/icon.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/image.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/infinite-scroll.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/infiniteScroll.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/input-number.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/input.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/link.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/loading.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/menu-item-group.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/menu-item.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/menu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/message-box.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/message.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/notification.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/option-group.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/option.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/page-header.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/pagination.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/popover.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/popper.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/progress.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/radio-button.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/radio-group.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/radio.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/rate.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/row.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/scrollbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/select-dropdown.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/select.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/slider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/spinner.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/step.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/steps.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/submenu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/switch.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/tab-pane.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/table-column.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/table.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/tabs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/tag.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/time-picker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/time-select.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/timeline-item.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/timeline.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/tooltip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/transfer.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/tree.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/theme-chalk/upload.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/time-picker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/time-select.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/timeline-item.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/timeline.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/transfer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/transitions/collapse-transition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/af-ZA.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/cs-CZ.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ee.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/hy-AM.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/kg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/km.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ku.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/kz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/mn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/nb-NO.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ru-RU.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/sv-SE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ta.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/tk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/tr-TR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/ug-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/uz-UZ.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/umd/locale/zh-TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/after-leave.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/aria-dialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/aria-utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/clickoutside.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/date-util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/date.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/dom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/menu/aria-menubar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/menu/aria-menuitem.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/menu/aria-submenu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/merge.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/popper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/popup/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/popup/popup-manager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/resize-event.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/scroll-into-view.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/scrollbar-width.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/shared.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/vdom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/elementui/utils/vue-popper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-brands-400.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-regular-400.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/img/bg.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/js/cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/js/language.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/js/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/js/vue.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/locale/en-us.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/locale/zh-hans.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/particles/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/particles/particles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/admin.lte.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/admin.lte.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/admin.lte.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/aircraft.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/aircraft.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/aircraft.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/ant.design.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/ant.design.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/ant.design.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/base.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/black.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/black.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/black.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/dark.green.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/dark.green.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/dark.green.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-black-pro.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-black-pro.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-black-pro.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-black.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-black.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-black.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-blue-pro.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-blue-pro.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-blue-pro.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-blue.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-blue.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-blue.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-green-pro.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-green-pro.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-green-pro.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-green.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-green.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-green.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-purple-pro.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-purple-pro.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-purple-pro.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-purple.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-purple.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-purple.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-red-pro.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-red-pro.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-red-pro.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-red.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-red.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/e-red.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/element.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/element.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/element.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/gray.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/gray.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/gray.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/green.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/green.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/green.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/highdmin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/highdmin.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/highdmin.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/layui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/layui.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/layui.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/light.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/light.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/orange.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/orange.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/orange.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/purple.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/purple.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/purple.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/simpleui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/simpleui.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/simpleui.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/theme.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/x-blue.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/x-blue.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/x-blue.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/x-green.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/x-green.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/x-green.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/x-red.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/x-red.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/theme/x-red.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/waves/waves.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/waves/waves.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/admin/simpleui-x/waves/waves.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/import_export/action_formats.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/logged_out.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/password_change_done.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/password_change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/password_reset_complete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/password_reset_done.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/password_reset_email.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/password_reset_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainsys/config.py" afterPath="$PROJECT_DIR$/mainsys/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainsys/run.sh" afterPath="$PROJECT_DIR$/mainsys/run.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,71 +586,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/accounts/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="middleware.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/middleware.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simpletags.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/core/templatetags/simpletags.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbconfig.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainsys/dbconfig.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainsys/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
+            <state relative-caret-position="586">
               <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/core/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="19" column="95" lean-forward="false" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -102,8 +599,18 @@
       <file leaf-file-name="run.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainsys/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            <state relative-caret-position="135">
+              <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/admin/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -119,11 +626,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainsys/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3807">
-              <caret line="141" column="85" lean-forward="false" selection-start-line="141" selection-start-column="81" selection-end-line="141" selection-end-column="85" />
+            <state relative-caret-position="372">
+              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="move_vertex_on.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.svg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logged_out.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/registration/logged_out.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,7 +678,6 @@
       <find>delivery_mode</find>
       <find>on_mess</find>
       <find>start_consuming()</find>
-      <find>static</find>
       <find>logo.png</find>
       <find>logo</find>
       <find>改变主题</find>
@@ -171,6 +697,7 @@
       <find>print</find>
       <find>todo</find>
       <find>EMAIL_HOST_USER</find>
+      <find>static</find>
     </findStrings>
     <replaceStrings>
       <replace>text</replace>
@@ -186,7 +713,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/templates/500.html" />
         <option value="$PROJECT_DIR$/templates/502.html" />
         <option value="$PROJECT_DIR$/templates/429.html" />
@@ -237,6 +763,7 @@
         <option value="$PROJECT_DIR$/mainsys/dbconfig.py" />
         <option value="$PROJECT_DIR$/mainsys/config.py" />
         <option value="$PROJECT_DIR$/mainsys/run.sh" />
+        <option value="$PROJECT_DIR$/static/robots.txt" />
       </list>
     </option>
   </component>
@@ -253,7 +780,7 @@
     <option name="height" value="1019" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -267,7 +794,76 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gmx">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gmx">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="templates">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gmx">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gmx">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="mainsys">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gmx">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="apps">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -347,147 +943,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.8.0 (C:\Python38\python3.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simpleui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simpleui-x" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.8.0 (C:\Python38\python3.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simpleui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simpleui-x" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.8.0 (C:\Python38\python3.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simpleui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simpleui-x" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elementui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.8.0 (C:\Python38\python3.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simpleui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -498,6 +954,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gmx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gmx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gmx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -525,83 +995,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mainsys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db_pool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mainsys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db_pool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -619,18 +1013,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\gmx\templates" />
+      <recent name="E:\gmx\static\admin" />
+      <recent name="E:\gmx\static" />
       <recent name="E:\gmx" />
       <recent name="E:\gmx\apps\core\templatetags" />
-      <recent name="E:\gmx\static\admin" />
-      <recent name="E:\gmx\templates" />
-      <recent name="E:\gmx\apps\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gmx\static\admin\imgs" />
+      <recent name="E:\gmx\static" />
       <recent name="E:\gmx\templates\admin" />
       <recent name="E:\gmx\static\admin\img" />
       <recent name="E:\gmx\static\admin" />
-      <recent name="E:\gmx\static\admin\simpleui-x\img" />
-      <recent name="E:\gmx\templates" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.gmx">
@@ -1025,7 +1419,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53729606" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37529138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34615386" sideWeight="0.49805447" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1038,6 +1432,26 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5019455" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37529138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34615386" sideWeight="0.49805447" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1917732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4079254" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1063,44 +1477,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/publisher.py" />
-    <entry file="file://$PROJECT_DIR$/consumer.html" />
-    <entry file="file://$PROJECT_DIR$/consumer.py" />
-    <entry file="file://$PROJECT_DIR$/apps/utils/rabbitmq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="411" column="3" lean-forward="true" selection-start-line="411" selection-start-column="3" selection-end-line="411" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python38/Lib/site-packages/simpleui/static/admin/simpleui-x/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="127" column="17" lean-forward="false" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python38/Lib/site-packages/simpleui/static/admin/simpleui-x/elementui/cascader-panel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1879">
-          <caret line="1371" column="10" lean-forward="false" selection-start-line="1371" selection-start-column="10" selection-end-line="1371" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/core/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/accounts/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python38/Lib/site-packages/simpleui/templatetags/simpletags.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -1134,13 +1510,6 @@
         <state relative-caret-position="432">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4671">
-          <caret line="173" column="33" lean-forward="false" selection-start-line="173" selection-start-column="33" selection-end-line="173" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1271,13 +1640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/context_processors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/core/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="783">
@@ -1304,14 +1666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainsys/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3807">
-          <caret line="141" column="85" lean-forward="false" selection-start-line="141" selection-start-column="81" selection-end-line="141" selection-end-column="85" />
           <folding />
         </state>
       </provider>
@@ -1403,18 +1757,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/favicon.icn">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/img/logo.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mainsys/run.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="135">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/import_export/action_formats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python38/Lib/site-packages/simpleui/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/context_processors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/logged_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainsys/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
+        <state relative-caret-position="586">
           <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/css/ui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainsys/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding />
         </state>
       </provider>
