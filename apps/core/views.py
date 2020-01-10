@@ -12,6 +12,18 @@ from apps.utils.cache import cache_flushdb
 from mainsys.settings import PROJECT_DIRNAME
 
 
+def forbidden(request, exception):
+    return render(request, "403.html")
+
+
+def page_not_found(request, exception):
+    return render(request, "404.html")
+
+
+def server_error(request):
+    return render(request, "500.html")
+
+
 def log_view(request, log_name, row_num):
     if request.user.is_superuser:
         log_dir = os.path.join(PROJECT_DIRNAME, "../mainsys/logs/")

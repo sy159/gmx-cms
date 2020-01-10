@@ -24,3 +24,8 @@ for ap in os.listdir(APP_ROOT):
             os.path.exists(os.path.join(os.path.join(APP_ROOT, ap), "__init__.py")) and \
             os.path.exists(os.path.join(os.path.join(APP_ROOT, ap), "urls.py")):
         urlpatterns.append(path(ap + "/", include(ap + ".urls")))
+
+# 自定义错误页面
+handler403 = "apps.core.views.forbidden"
+handler404 = "apps.core.views.page_not_found"
+handler500 = "apps.core.views.server_error"

@@ -30,7 +30,7 @@ def test(request):
 @csrf_exempt
 def login(request):
     # 如果已登录，重定向到首页
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         return redirect("/index/")
     else:
         if request.method == "POST":
@@ -77,7 +77,7 @@ def set_pwd(request):
 @csrf_exempt
 def signup(request):
     # 如果已登录，重定向到首页
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         return redirect("/index/")
     else:
         if request.method == "POST":

@@ -20,7 +20,7 @@ def url_required(func):
         from django.http import HttpResponseBadRequest
         from django.http import HttpResponseRedirect
         request = args[0]
-        if request.user.is_authenticated():
+        if request.user.is_authenticated:
             return func(*args, **kwargs)
         # 未登录需要验证签名
         sign = request.GET.get('sign', '')

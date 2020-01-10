@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <style>
+    html,body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background-color: #e8e4e5;
+      /* background-color: red; */
+      margin: 0;
+    }
+    .box {
+      /* width: 200px;
+      height: 200px; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* align-items: center; */
+    }
+    .box h3{
+      position: relative;
+      font-size: 200px;
+      letter-spacing:20px;
+      margin: 0;
+      color: #796060;
+      /* line-height: 20px; */
+      text-shadow: 5px 5px 20px #928787
+    }
+    .box h3:before{
+      content: '403';
+      position: absolute;
+      font-size: 200px;
+      letter-spacing:20px;
+      margin: 0;
+      color: #796060;
+      /* line-height: 20px; */
+      text-shadow: -5px -5px 20px #928787
+    }
+    .box p {
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      letter-spacing:5px;
+      color: #3e3e3e;
+      vertical-align: middle;
+    }
+  </style>
 
-</body>
+  <body>
+    <div class="box">
+      <h3>403</h3>
+      <p>抱歉，你被禁止访问该页面<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFDElEQVRYR+1Wa0wUVxS+s7PvByyPXV0guhGMGrCIMbWmUFBqQjFSXhUWyqOkCY08iuKr/WNMrX1htaY/SlKrtrUWAohRE6o1UiSxrWmLQVAq2AUKWGCBXXZ29jGz05yNg5Pt7HbXNDRNOv/u3Hvu/c453/nOwdC//GENrT8vF9rHv5WQU7EC2oktBh43LmYcMs0QJY16HjvadO28gHbpdxVlJC3G4+wbx77q+MWNi4zYic/bZh0K7aG9ecnHFxPAB63ddRJi8uB/B8D7rTcL9uVtagokSsArOLcnb/2wr/NBRQAulJnvDjpkEb1usTbH38VHm69/KrcYKwh13Ht78lPe+EcAwCUAAndMtstsE4l2mWaIFsp66wvSc2EPvMGd1lIJaVpLC2VWu0L32t9FK6gIcL0AIAyy5QgoR2p9QXoO7EF6cNq+1SWUnT6Q+0x3IGniBfBu2/fJcuv4Rb4LaKHcGEypAigpMfGJr7soifIMbxUcP3t5EMMYPFE3oGeNJ4lI9HA+fKTWsN1DrkA+cEZpGb6yLMZ6MwSf28LaDPyqRLOaxBScoTbwAoDQiG2m/Yb4dhohLBoM+83xqPd3vbmmJE8dyOMsL+CBgvhLlzEMFcM/ozUW/Ti8ylpdkq/yyQF2ozDhYg9CWBoY9pkTmN5Rvbm2NDcsWACGtZc6GQZls47cGV1uqy7NV/gE0NBy4x0ROVPOjUD3HymWkRntVF3xtrhAAQBZlbO3f8tOurFbgKFjYDdpX4q+u/+Uq6qsUOwTwIfnrnZiuMBcHHc2i32sfTDTZhEsOeGvrvmAfXy6yRapw97eouk4zO63/pSMiPB1eqgknyRUhqDmrOjWBRFhjfwJEB8AcEYgoMVFK5s3sfstfRkuQh61D9a8AKA5KdT4ye0xF+pZo/O3NqLKysqgW7Wn0yI6vHjl188tAOjPoAhZ1F6fAKBN0mJFR8mKU7swhCRwkA8AlJmUnD4F+3ZZ5Ct8AgQRwHFaaohr3sgB4LTIl6X7LEPQctxlSyta0zLKVkHbwAuUVbS0ATjADjBScirWpojpYnDhoNQ6XsYnwcABjQ4d2az55i2WhF331rh3VpTgvqvgEXtz13edRAh7FQw7J9LoMbO2F5QQPBe5iHpGGFbH5QRUD5xlicpXBZ3jqWjaFja8c0eW3m8vaGxsZLI3/HAIw9DBBSEa0ZtryoIXIq4OXB1NR3NOdU/VS9uS/EZANX3LiEVqjAoRqVeKbZ70jZgip2qKc7SB6gBESjU3dH21fubKQ2t4JtjNzwuRE1f11RZmJiwAAKbiFJkAA6KHmdb7dylR6ACD4WZY45RtlcQxs8QpDjU7Ffp1gZYipERl6j/gkqhJl/jxfWLHzNOwxhhKSQtldx5NxRPXBLQjQuB2SRgMoZqyAjnXU8inwGk6o7A8SKVESgoI5y8SEnJKDQ+Tqug3vWdNAKacG9xPynW3aYk2+y+1DTqAU6TSIdd2u0UR5VyPocWGzN47R4ToP6vfsdlDUG+gYsLY48YlJkqqS+faQsil1rEjIpdNauVMS7ziAvkTO+YPS8jJZ4nQFS9zpxsWhCVstcF76vnoiwsTjEBIePcMaPEQYb7p26+6sY3p9ZIXdVxPwRvZ/NiR6vLHqWJJ5d0xAbDC/ODLqopiEV/anggAXASlypVnUD34v9uw1dPC2Y+thicD4Ge8hou58utvFPc+ywUYdIMJVAcCPfc/gD8BzVFAYb+uEjgAAAAASUVORK5CYII="></p>
+    <div>
+  </body>
 </html>
