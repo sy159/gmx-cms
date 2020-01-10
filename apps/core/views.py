@@ -9,7 +9,6 @@ from django.shortcuts import render
 from django.views.decorators.cache import never_cache
 
 from apps.utils.cache import cache_flushdb
-from mainsys.settings import PROJECT_DIRNAME
 
 
 def forbidden(request, exception):
@@ -26,7 +25,7 @@ def server_error(request):
 
 def log_view(request, log_name, row_num):
     if request.user.is_superuser:
-        log_dir = os.path.join(PROJECT_DIRNAME, "../mainsys/logs/")
+        log_dir = os.path.join("mainsys/logs")
         log_file = os.path.join(log_dir, log_name)
         if os.path.isfile(log_file):
             log_file_handle = open(log_file, 'r')
