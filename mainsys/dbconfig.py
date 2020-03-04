@@ -14,7 +14,7 @@ es_conf = {
 
 # mq连接配置
 mq_conf = {
-    "host": "106.12.8.159",
+    "host": "127.0.0.1",
     "port": 5672,
     "vhost": "test",  # 虚拟主机
     "user": "admin",
@@ -23,7 +23,7 @@ mq_conf = {
 
 # redis连接配置
 redis_conf = {
-    "host": "106.12.8.159",  # "49.234.18.154" 6380,
+    "host": "127.0.0.1",  # "49.234.18.154" 6380,
     "port": 6379,
     "db": "0",
     "pwd": "zx.123",
@@ -49,7 +49,7 @@ DATABASES = {
         'NAME': "gmx",
         'USER': "test",
         'PASSWORD': "zx.123",
-        'HOST': "106.12.8.159",
+        'HOST': "127.0.0.1",
         'PORT': 3306,
         # 持久化(每个数据库连接的最大存活时间，以秒为单位。0表示在每个请求结束时关闭数据库连接，None表示无限的持久连接),小于数据库的maxWait
         'CONN_MAX_AGE': 20,
@@ -64,7 +64,7 @@ DATABASES = {
         "NAME": "gmx",
         "USER": "test",
         "PASSWORD": "zx.123",
-        "HOST": "106.12.8.159",
+        "HOST": "127.0.0.1",
         'PORT': 3306,
     }
 }
