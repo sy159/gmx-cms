@@ -1,0 +1,7 @@
+*.pyc
+*.pyo
+*.py~
+*.bak
+/.idea/
+# /mainsys/config.py
+/mainsys/dbconfig.py
