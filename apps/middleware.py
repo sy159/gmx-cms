@@ -14,7 +14,9 @@ from django.core.cache import cache
 class RequestMiddleware(MiddlewareMixin):
     def process_request(self, request):
         url_list = ["/accounts/test/"]  # 需要做访问频率限制的url
-        black_ip = []
+        black_ip = []  # ip黑名单
+        # 如果sign放在header里面的话(header key必须增加前缀HTTP，同时大写)
+        header_sign = request.META.get("HTTP_SIGN", "")
         if request.path in url_list:
             if request.META.get('HTTP_X_FORWARDED_FOR'):
                 ip = request.META['HTTP_X_FORWARDED_FOR']
