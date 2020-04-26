@@ -4,3 +4,5 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 # 收集静态文件
 python3 manage.py collectstatic
+# celery
+celery -A mainsys.celery_run worker -l info
