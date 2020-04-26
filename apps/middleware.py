@@ -19,9 +19,9 @@ class RequestMiddleware(MiddlewareMixin):
         header_sign = request.META.get("HTTP_SIGN", "")
         if request.path in url_list:
             if request.META.get('HTTP_X_FORWARDED_FOR'):
-                ip = request.META['HTTP_X_FORWARDED_FOR']
+                ip = request.META.get('HTTP_X_FORWARDED_FOR', "").split(',')[0]  # 真实的ip
             else:
-                ip = request.META['REMOTE_ADDR']
+                ip = request.META.get('REMOTE_ADDR')  # 代理ip
             if ip in black_ip:
                 return render(request, '403.html')
             cache_key = hashlib.md5(ip.encode("utf-8")).hexdigest()
