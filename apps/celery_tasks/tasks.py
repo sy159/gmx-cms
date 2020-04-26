@@ -44,7 +44,4 @@ def send_email(x, y):
 def schedule_test():  # 定时任务
     import datetime
     now = str(datetime.datetime.now())
-    with open("xx.txt", "w") as f:
-        f.write(now)
-    print(now)
     return now
