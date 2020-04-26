@@ -34,13 +34,13 @@ task_routes = {
 }
 
 # 这里是定时任务的配置
-CELERY_BEAT_SCHEDULE = {
-    'task_method': {  # 随便起的名字
-        'task': 'schedule_test',  # 需要执行定时任务的函数名
-        'schedule': timedelta(seconds=15),  # 名字为task_method的定时任务, 每10秒执行一次
-        # "args": (4,9), # 参数
-        'options': {
-            'queue': 'beat_queue',  # 指定要使用的队列
-        }
-    },
-}
+# CELERY_BEAT_SCHEDULE = {
+#     'task_method': {  # 随便起的名字
+#         'task': 'schedule_test',  # 需要执行定时任务的函数名
+#         'schedule': timedelta(seconds=15),  # 名字为task_method的定时任务, 每10秒执行一次
+#         # "args": (4,9), # 参数
+#         'options': {
+#             'queue': 'celery_beat',  # 指定要使用的队列
+#         }
+#     },
+# }
