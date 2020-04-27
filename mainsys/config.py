@@ -7,7 +7,7 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 8388608  # 最大文件上传size
 CACHE_MIDDLEWARE_SECONDS = 900  # 默认缓存过期时间
 CACHE_MIDDLEWARE_KEY_PREFIX = "gmx"  # 缓存前缀
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*", ]
 
@@ -18,6 +18,18 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'  # session存储�
 SESSION_SAVE_EVERY_REQUEST = True  # SESSION_COOKIE_AGE 和 SESSION_EXPIRE_AT_BROWSER_CLOSE 这两个参数只有在 SESSION_SAVE_EVERY_REQUEST 为 True 时才有效
 SESSION_COOKIE_AGE = 1800  # session过期时间60分钟
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # 是否在用户关闭浏览器时过期会话
+
+# oauth2相关配置
+OAUTH2_PROVIDER = {
+    'SCOPES': {
+        'read': 'Read scope',
+        'write': 'Write scope',
+    },
+
+    'CLIENT_ID_GENERATOR_CLASS': 'oauth2_provider.generators.ClientIdGenerator',
+    'ACCESS_TOKEN_EXPIRE_SECONDS': 60, # 访问token有效时间
+    'AUTHORIZATION_CODE_EXPIRE_SECONDS': 600, # 授权码(grant code)有效时间，在此持续时间之后请求访问令牌将失败
+}
 
 # Email设置
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -14,6 +14,8 @@ class WebSettings(models.Model):
     SESSION_COOKIE_SECONDS = models.IntegerField("session过期时间", default=1800, null=True, help_text="全站session过期时间，单位：秒")
     SESSION_EXPIRE_AT_BROWSER_CLOSE = models.CharField('关闭浏览器session是否失效', max_length=5, null=True, default="True", choices=(("False", "否"), ("True", "是")))
     FILE_UPLOAD_MAX_MEMORY_SIZE = models.IntegerField('文件上传大小上限', default=8388608, null=True, help_text='设置最大允许上传的文件大小，单位：bit。8388608=8M')
+    ACCESS_TOKEN_EXPIRE_SECONDS = models.IntegerField("访问token有效时间", default=60, null=True, help_text='oauth2访问token有效时间(秒),超时之后请求受保护的资源将失败')
+    AUTHORIZATION_CODE_EXPIRE_SECONDS = models.IntegerField("授权码(grant code)有效时间", default=600, null=True, help_text='授权码有效时间(秒),在此持续时间之后请求访问令牌将失败')
     EMAIL_HOST = models.CharField('SMTP服务器', max_length=50, blank=True, null=True, default="smtp.163.com", help_text="邮件发送服务器地址，比如：smtp.ym.163.com")
     EMAIL_PORT = models.IntegerField('SMTP端口号', null=True, blank=True, default=25)
     EMAIL_SUBJECT_PREFIX = models.CharField('邮件标题的前缀', max_length=20, null=True, blank=True, default="")
@@ -56,6 +58,18 @@ SESSION_SAVE_EVERY_REQUEST = True  # SESSION_COOKIE_AGE 和 SESSION_EXPIRE_AT_BR
 SESSION_COOKIE_AGE = %s  # session过期时间60分钟
 SESSION_EXPIRE_AT_BROWSER_CLOSE = %s  # 是否在用户关闭浏览器时过期会话
 
+# oauth2相关配置
+OAUTH2_PROVIDER = {
+    'SCOPES': {
+        'read': 'Read scope',
+        'write': 'Write scope',
+    },
+
+    'CLIENT_ID_GENERATOR_CLASS': 'oauth2_provider.generators.ClientIdGenerator',
+    'ACCESS_TOKEN_EXPIRE_SECONDS': %s, # 访问token有效时间
+    'AUTHORIZATION_CODE_EXPIRE_SECONDS': %s, # 授权码(grant code)有效时间，在此持续时间之后请求访问令牌将失败
+}
+
 # Email设置
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = '%s'  # QQ邮箱SMTP服务器(邮箱需要开通SMTP服务)
@@ -66,8 +80,8 @@ EMAIL_SUBJECT_PREFIX = '%s'  # 为邮件标题的前缀,默认是'[django]'
 EMAIL_USE_TLS = %s  # 开启安全链接
 DEFAULT_FROM_EMAIL = SERVER_EMAIL = EMAIL_HOST_USER  # 设置发件人
 ''' % (str(self.FILE_UPLOAD_MAX_MEMORY_SIZE), str(self.CACHE_MIDDLEWARE_SECONDS), self.CACHE_MIDDLEWARE_KEY_PREFIX, self.DEBUG, ALLOWED_HOSTS, self.SITE_HEADER,
-       str(self.SESSION_COOKIE_SECONDS), self.SESSION_EXPIRE_AT_BROWSER_CLOSE, self.EMAIL_HOST, str(self.EMAIL_PORT), self.EMAIL_HOST_USER,
-       self.EMAIL_HOST_PASSWORD, self.EMAIL_SUBJECT_PREFIX, self.EMAIL_USE_TLS)
+       str(self.SESSION_COOKIE_SECONDS), self.SESSION_EXPIRE_AT_BROWSER_CLOSE, str(self.ACCESS_TOKEN_EXPIRE_SECONDS), str(self.AUTHORIZATION_CODE_EXPIRE_SECONDS), self.EMAIL_HOST,
+       str(self.EMAIL_PORT), self.EMAIL_HOST_USER, self.EMAIL_HOST_PASSWORD, self.EMAIL_SUBJECT_PREFIX, self.EMAIL_USE_TLS)
         with open("mainsys/config.py", "w", encoding="utf-8") as f:
             f.write(config_text)
         super(WebSettings, self).save(*args, **kwargs)

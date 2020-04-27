@@ -7,6 +7,7 @@ from apps.core.models import *
 class WebSettingsAdmin(admin.ModelAdmin):
     fieldsets = (("基础设置", {"fields": ["DEBUG", "ALLOWED_HOSTS", "FILE_UPLOAD_MAX_MEMORY_SIZE", "SITE_HEADER"]}),
                  ("缓存及session设置", {"fields": ["CACHE_MIDDLEWARE_SECONDS", "CACHE_MIDDLEWARE_KEY_PREFIX", "SESSION_COOKIE_SECONDS", "SESSION_EXPIRE_AT_BROWSER_CLOSE"]}),
+                 ("OAuth2设置", {"fields": ["ACCESS_TOKEN_EXPIRE_SECONDS", "AUTHORIZATION_CODE_EXPIRE_SECONDS"]}),
                  ("邮箱配置", {"fields": ["EMAIL_HOST", "EMAIL_PORT", "EMAIL_SUBJECT_PREFIX", "EMAIL_HOST_USER", "EMAIL_HOST_PASSWORD", "EMAIL_USE_TLS"]}),
                  )
     radio_fields = {"DEBUG": admin.HORIZONTAL, "EMAIL_USE_TLS": admin.HORIZONTAL, "SESSION_EXPIRE_AT_BROWSER_CLOSE": admin.HORIZONTAL}

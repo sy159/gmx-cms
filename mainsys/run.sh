@@ -6,3 +6,5 @@ python3 manage.py migrate
 python3 manage.py collectstatic
 # celery
 celery -A mainsys.celery_run worker -l info
+# oauth2
+python3 manage.py migrate oauth2_provider

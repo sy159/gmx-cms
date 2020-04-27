@@ -13,6 +13,7 @@ admin.site.login_form = AdminLoginForm  # 源码提供login_form自定义登录�
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
 
 admin.site.site_header = SITE_HEADER or "后台管理系统"

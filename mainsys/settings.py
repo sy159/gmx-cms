@@ -8,6 +8,7 @@ SIMPLEUI_HOME_ACTION = True  # 最近动作
 # 后台菜单栏映射表（app的首字母大写）
 ADMIN_MENU_DICT = {
     "Core": "网站管理",
+    "Django OAuth Toolkit": "OAuth2管理"
 }
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -45,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'oauth2_provider',
+    'corsheaders',
 ]
 
 APPS_CANNOT_INTSALL = ["utils", ]  # 禁止作为app安装的目录
@@ -60,8 +63,10 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'apps.middleware.RequestMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'oauth2_provider.middleware.OAuth2TokenMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
