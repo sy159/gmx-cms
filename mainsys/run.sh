@@ -8,3 +8,4 @@ python3 manage.py collectstatic
 celery -A mainsys.celery_run worker -l info
 # oauth2
 python3 manage.py migrate oauth2_provider
+python3 manage.py cleartokens  # 清理过期的token

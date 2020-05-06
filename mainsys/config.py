@@ -7,7 +7,7 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 8388608  # 最大文件上传size
 CACHE_MIDDLEWARE_SECONDS = 900  # 默认缓存过期时间
 CACHE_MIDDLEWARE_KEY_PREFIX = "gmx"  # 缓存前缀
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*", ]
 
@@ -27,7 +27,7 @@ OAUTH2_PROVIDER = {
     },
 
     'CLIENT_ID_GENERATOR_CLASS': 'oauth2_provider.generators.ClientIdGenerator',
-    'ACCESS_TOKEN_EXPIRE_SECONDS': 60, # 访问token有效时间
+    'ACCESS_TOKEN_EXPIRE_SECONDS': 300, # 访问token有效时间
     'AUTHORIZATION_CODE_EXPIRE_SECONDS': 600, # 授权码(grant code)有效时间，在此持续时间之后请求访问令牌将失败
 }
 
