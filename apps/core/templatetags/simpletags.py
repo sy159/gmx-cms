@@ -217,6 +217,16 @@ def menus(context, _get_config=None):
         if app.get("name") == "Core":
             module.get("models", []).insert(0,
                 {
+                    "name": "媒体库",
+                    "icon": "el-icon-files",
+                    "url": "/core/file_system/",
+                    "breadcrumbs": [
+                        {"name": "网站管理", "icon": "far fa-file"},
+                        {"name": "媒体库", "icon": "el-icon-files"}
+                    ]
+                }, )
+            module.get("models", []).insert(0,
+                {
                     "name": "系统日志",
                     "icon": "el-icon-document",
                     "url": "/core/log/error.log/100/",
@@ -226,7 +236,9 @@ def menus(context, _get_config=None):
                         {"name": "系统日志", "icon": "el-icon-document"}
                     ]
                 }, )
-        data.append(module)
+            data.append(module)
+        else:
+            data.insert(0, module)
 
     # 如果有menu 就读取，没有就调用系统的
     key = 'system_keep'

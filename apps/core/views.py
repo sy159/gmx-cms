@@ -54,6 +54,40 @@ def log_view(request, log_name, row_num):
 
 
 @never_cache
-def delcache(request):
+def del_cache(request):
     cache_flushdb()
     return HttpResponse('<script>alert("全站缓存清除成功");window.history.back();</script>')
+
+
+def file_system(request):
+    from mainsys.settings import MEDIA_ROOT
+    if request.method == "GET":
+        file_info_list = []
+        file_path = MEDIA_ROOT + request.GET.get("path", "")
+        try:
+            file_name_list = os.listdir(file_path)
+        except FileNotFoundError:
+            file_name_list = []
+        for file_name in file_name_list:
+            file_info_list.append({
+                "file_name": file_name,
+                "is_dir": os.path.isdir(file_path + "/" + file_name),
+                "file_size": os.path.getsize(file_path  + "/" + file_name) // 1024
+            })
+        return render(request, "admin/files.html", {"file_info_list": file_info_list})
+    else:
+        method = request.POST.get("method", "del")
+        path = MEDIA_ROOT + request.POST.get("path", "")
+        if method == "del":  # 删除文件夹或文件
+            if os.path.isdir(path):  # 如果是文件夹
+                os.removedirs(path)
+            else:
+                os.unlink(path)
+        elif method == "add_file":  # 上传文件
+            pass
+        elif method == "add_dir":  # 新建文件夹
+            os.mkdir(r"E:\zzq_project\gmx\media\test.py")
+            pass
+        elif method == "rename":
+            os.rename(r"E:\zzq_project\gmx\media\test.py", r"E:\zzq_project\gmx\media\test22.py")
+            pass
