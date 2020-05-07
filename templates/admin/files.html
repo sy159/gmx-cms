@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+        <td>文件名</td>
+        <td>文件大小</td>
+        <td>是否文件夹</td>
+    </thead>
+    <tbody>
+    {% for file_info in file_info_list %}
+    <tr>
+        <td>{{ file_info.file_name }}</td>
+        <td>{{ file_info.file_size }}kb</td>
+        <td>{{ file_info.is_dir }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
