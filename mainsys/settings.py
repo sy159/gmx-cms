@@ -25,9 +25,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-MEDIA_URL = "/media/"  # 媒体文件路径
+MEDIA_URL = "media/"  # 媒体文件路径
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "/media/")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 ROOT_URLCONF = "mainsys.urls"
 

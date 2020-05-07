@@ -1,10 +1,14 @@
 from __future__ import unicode_literals
 
 import os
-from mainsys.settings import APP_ROOT, APPS_CANNOT_INTSALL
+
+from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
+from django.views.static import serve
+
 from apps.accounts.forms import AdminLoginForm
+from mainsys.settings import APP_ROOT, APPS_CANNOT_INTSALL, MEDIA_ROOT
 from mainsys.settings import SITE_HEADER
 
 admin.autodiscover()
@@ -13,7 +17,8 @@ admin.site.login_form = AdminLoginForm  # 源码提供login_form自定义登录�
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    url(r'media/(?P<path>.*)', serve, {"document_root": MEDIA_ROOT}),  # 查看媒体文件
+    path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),  # 用于oauth2授权
 ]
 
 admin.site.site_header = SITE_HEADER or "后台管理系统"
