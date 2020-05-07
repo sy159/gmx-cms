@@ -5,6 +5,7 @@ import sys
 SIMPLEUI_HOME_INFO = True  # 服务器信息
 SIMPLEUI_HOME_QUICK = True  # 快速操作
 SIMPLEUI_HOME_ACTION = True  # 最近动作
+SIMPLEUI_STATIC_OFFLINE = False  # 为True的时候将默认从本地读取所有资源, 默认从第三方的cdn获取
 # 后台菜单栏映射表（app的首字母大写）
 ADMIN_MENU_DICT = {
     "Core": "网站管理",
@@ -63,10 +64,10 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'apps.middleware.RequestMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # oauth防止cors
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'oauth2_provider.middleware.OAuth2TokenMiddleware',
+    'oauth2_provider.middleware.OAuth2TokenMiddleware',  # oauth认证
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
