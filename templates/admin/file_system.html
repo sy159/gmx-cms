@@ -1,25 +1,266 @@
+{% load i18n static simpletags %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<table>
-    <thead>
-        <td>文件名</td>
-        <td>文件大小</td>
-        <td>是否文件夹</td>
-    </thead>
-    <tbody>
-    {% for file_info in file_info_list %}
-    <tr>
-        <td>{{ file_info.file_name }}</td>
-        <td>{{ file_info.file_size }}kb</td>
-        <td>{{ file_info.is_dir }}</td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>文件管理系统</title>
+    {% if "SIMPLEUI_STATIC_OFFLINE"|get_config %}
+    <link
+      rel="stylesheet"
+      href="{% static '/admin/simpleui-x/elementui/theme-chalk/index.css' %}"
+    />
+    {% else %}
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+    {% endif %}
+
+    <style>
+      .el-breadcrumb {
+        font-size: 18px;
+      }
+      .icon {
+        margin: 0 10px;
+        font-size: 18px;
+        color: #a0c5e8;
+        cursor: pointer;
+      }
+      .header {
+        padding: 20px 30px 0 30px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .header .icon_seperate{
+        color: #cec6c6;
+      }
+      .btn_group {
+        text-align: right;
+        padding: 5px 30px;
+      }
+      .content {
+        margin: 20px 30px;
+      }
+      .search_box {
+        border-radius: 10px;
+        border: 1px solid #e6e6e6;
+        overflow: hidden;
+        font-size: 14px;
+      }
+      .search_title {
+        background-image: linear-gradient(
+          to bottom,
+          #fff 0%,
+          #e7e7e7 10%,
+          #fff 100%
+        );
+        border-bottom: 1px solid #e6e6e6;
+        padding: 5px 10px;
+      }
+      .search_content {
+        padding: 10px;
+      }
+      .search_input {
+        height: 20px;
+        border-radius: 5px;
+        border: 1px solid #e6e6e6;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">
+        <div>
+          <span v-if="path === ''" @click="getFileList('')">媒体库</span>
+          <div v-else>
+            <span @click="getFileList('')">媒体库</span>
+            <span
+              v-for="(item,index) in pathArr"
+              @click="handleJoin(pathArr,index)"
+              ><span class="icon_seperate">/</span>{{item}}</span
+            >
+          </div>
+        </div>
+      <div class="btn_group">
+        <el-button type="info" plain>创建文件夹</el-button>
+        <el-button type="primary">上传</el-button>
+      </div>
+
+      <div class="content">
+        <!-- <el-row :gutter="20"> -->
+        <!-- <el-col :span="20"> -->
+        <el-table
+          :data="tableData"
+          border
+          style="width: 100%;"
+          :header-cell-style="headerbg"
+          stripe
+        >
+          <el-table-column type="index" width="50">
+            <template slot-scope="scope">
+              <i
+                :class="scope.row.is_dir ? 'el-icon-folder' : 'el-icon-document-remove' "
+              ></i>
+            </template>
+          </el-table-column>
+          {% verbatim myblock %}
+          <el-table-column prop="file_name" label="文件名">
+            <template slot-scope="scope">
+              <div v-if=" isEdit  == scope.row.file_name ">
+                <el-input
+                  size="small"
+                  v-if="!scope.row.is_dir"
+                  :value="scope.row.file_name.split('.')[0]"
+                  @input="handleChange(scope.row)"
+                  @blur="closeinput(scope.row)"
+                >
+                    <template slot="append">{{scope.row.file_name.split('.')[1]}}</template></el-input>
+                <el-input size="small" v-model="scope.row.file_name" v-else @change="closeinput(scope.row)"></el-input>
+              </div>
+              <span v-else>{{scope.row.file_name}}</span>
+            </template>
+          </el-table-column>
+          {% endverbatim myblock %}
+          <el-table-column label="操作" width="100">
+            <template slot-scope="scope">
+              <i
+                class="el-icon-edit icon"
+                @click="handleEdit(scope.row.file_name)"
+              ></i>
+            </template>
+          </el-table-column>
+          <el-table-column prop="file_size" label="大小"> </el-table-column>
+          <el-table-column prop="create" label="日期"> </el-table-column>
+          <el-table-column label="操作" width="100">
+            <template slot-scope="scope">
+              <i class="el-icon-delete icon"></i>
+            </template>
+          </el-table-column>
+        </el-table>
+      </div>
+    </div>
+    {% if "SIMPLEUI_STATIC_OFFLINE"|get_config %}
+    <script type="text/javascript" src="{% static '/admin/simpleui-x/js/vue.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/admin/simpleui-x/elementui/index.js' %}"></script>
+    {% else %}
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    {% endif %}
+    <script
+      type="text/javascript"
+      src="{% static '/admin/js/vendor/jquery/jquery.min.js' %}"
+    ></script>
+    <script>
+      //去掉空值
+      Array.prototype.notempty = function () {
+        var arr = [];
+        this.map(function (val, index) {
+          //过滤规则为，不为空串、不为null、不为undefined，也可自行修改
+          if (val !== "" && val != undefined) {
+            arr.push(val);
+          }
+        });
+        return arr;
+      };
+      const app = new Vue({
+        el: "#app",
+        data: {
+          path: "", //当前目录
+          isEdit: "",
+          tableData: [
+            {
+              file_name: "vue视频学习",
+              file_size: "10kb",
+              create: "2016-05-02",
+              is_dir: true,
+            },
+            {
+              file_name: "00-ES6补充",
+              file_size: "25.8kb",
+              create: "2016-05-02",
+              is_dir: true,
+            },
+            {
+              file_name: "demo1.html",
+              file_size: "35.8kb",
+              create: "2016-05-02",
+              is_dir: false,
+            },
+            {
+              file_name: "index.html",
+              file_size: "35.8kb",
+              create: "2016-05-02",
+              is_dir: false,
+            },
+            {
+              file_name: "main.html",
+              file_size: "35.8kb",
+              create: "2016-05-02",
+              is_dir: false,
+            },
+          ],
+        },
+        computed: {
+          pathArr() {
+            if (this.path !== "") {
+              let patharr = this.path.split("/").notempty();
+              return patharr;
+            } else {
+              return;
+            }
+          },
+        },
+        methods: {
+          //处理path
+          handleJoin(arr, index) {
+            arr.splice(index + 1, this.pathArr.length - index - 1);
+            arr.join('/')
+            this.path = '/'+arr.join('/')+'/'
+            this.getFileList(this.path)
+          },
+          //获取文件数据
+          getFileList(path) {
+            $.ajax({
+              type: "post",
+              url: "/core/file_system/",
+              data: {
+                path,
+                method: "get",
+              },
+              success: (res) => {
+                if (res.success == true) {
+                  this.tableData = res.data;
+                }
+              },
+              error: (err) => {
+                console.log(err);
+              },
+            });
+          },
+          //编辑文件名
+          handleEdit(name) {
+            this.isEdit = name;
+          },
+          closeinput(row) {
+            console.log(row);
+            this.isEdit = "";
+          },
+          handleChange(row) {
+            // console.log(event.target.value);
+            row.file_name =
+              event.target.value + "." + row.file_name.split(".")[1];
+          },
+          headerbg() {
+            return "background-image: linear-gradient(to bottom , #fff 0%, #E7E7E7 10%,#fff 100%);border: 1px solid #EAEAEA";
+            // if(rowIndex == 0){
+            //   return ""
+            // }
+          },
+        },
+        mounted() {
+          this.getFileList(this.path);
+        },
+      });
+    </script>
+  </body>
 </html>

@@ -5,8 +5,10 @@ import os
 from django.http import Http404
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
+from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.cache import never_cache
+from django.views.decorators.csrf import csrf_exempt
 
 from apps.utils.cache import cache_flushdb
 
@@ -59,35 +61,65 @@ def del_cache(request):
     return HttpResponse('<script>alert("全站缓存清除成功");window.history.back();</script>')
 
 
+@csrf_exempt
 def file_system(request):
-    from mainsys.settings import MEDIA_ROOT
-    if request.method == "GET":
-        file_info_list = []
-        file_path = MEDIA_ROOT + request.GET.get("path", "")
-        try:
-            file_name_list = os.listdir(file_path)
-        except FileNotFoundError:
-            file_name_list = []
-        for file_name in file_name_list:
-            file_info_list.append({
-                "file_name": file_name,
-                "is_dir": os.path.isdir(file_path + "/" + file_name),
-                "file_size": os.path.getsize(file_path  + "/" + file_name) // 1024
-            })
-        return render(request, "admin/files.html", {"file_info_list": file_info_list})
+    if request.user.is_superuser:
+        from mainsys.settings import MEDIA_ROOT
+        if request.method == "GET":
+            return render(request, "admin/file_system.html")
+        else:
+            method = request.POST.get("method", "del")
+            path = MEDIA_ROOT + request.POST.get("path", "")
+            print(method, path)
+            result = {"code": "200", "success": True, "msg": ""}
+            if not os.path.exists(path):
+                result["success"] = False
+                result["msg"] = "该文件或者目录不存在"
+                return JsonResponse(result, safe=False)
+            if method == "del":  # 删除文件夹或文件
+                try:
+                    if os.path.isdir(path):  # 如果是文件夹
+                        os.removedirs(path)
+                    else:
+                        os.unlink(path)
+                except Exception as e:
+                    result["msg"] = e
+                    result["success"] = False
+            elif method == "add_file":  # 上传文件
+                wl_file = request.FILES.get("file", None)
+                if not os.path.isdir(path):
+                    result["success"] = False
+                    result["msg"] = "该目录不存在"
+                all_files = filter(lambda files:os.path.isfile(f"{path}/{files}"), os.listdir(path))
+                if wl_file.name in all_files:  # 重名
+                    result["success"] = False
+                    result["msg"] = "文件名已存在"
+                    return JsonResponse(result)
+                with open(f"{path}/{wl_file.name}", "wb+") as f:
+                    for content in wl_file.chunks():
+                        f.write(content)
+            elif method == "add_dir":  # 新建文件夹
+                os.mkdir(path)
+                pass
+            elif method == "rename":
+                os.rename(r"E:\zzq_project\gmx\media\test.py", r"E:\zzq_project\gmx\media\test22.py")
+                pass
+            elif method == "get":
+                file_info_list = []
+                file_path = MEDIA_ROOT + request.POST.get("path", "")
+                try:
+                    file_name_list = os.listdir(file_path)
+                except FileNotFoundError:
+                    file_name_list = []
+                    result["msg"] = "该文件不存在"
+                for file_name in file_name_list:
+                    file_info_list.append({
+                        "file_name": file_name,
+                        "is_dir": os.path.isdir(file_path + "/" + file_name),
+                        "file_size": os.path.getsize(file_path  + "/" + file_name) // 1024,
+                        "create": ""
+                    })
+                result["data"] = file_info_list
+            return JsonResponse(result, safe=False)
     else:
-        method = request.POST.get("method", "del")
-        path = MEDIA_ROOT + request.POST.get("path", "")
-        if method == "del":  # 删除文件夹或文件
-            if os.path.isdir(path):  # 如果是文件夹
-                os.removedirs(path)
-            else:
-                os.unlink(path)
-        elif method == "add_file":  # 上传文件
-            pass
-        elif method == "add_dir":  # 新建文件夹
-            os.mkdir(r"E:\zzq_project\gmx\media\test.py")
-            pass
-        elif method == "rename":
-            os.rename(r"E:\zzq_project\gmx\media\test.py", r"E:\zzq_project\gmx\media\test22.py")
-            pass
+        return HttpResponseRedirect("/admin")
