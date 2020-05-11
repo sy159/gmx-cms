@@ -126,6 +126,7 @@ DATE_FORMAT = 'Y-m-d'
 USE_L10N = True  # 用于决定是否开启数据本地化。如果此设置为True，例如Django将使用当前语言环境的格式显示数字和日期。
 LANGUAGE_CODE = "zh-hans"  # 简体中文
 # LANGUAGE_CODE = "zh-hant"  # 繁体中文
+X_FRAME_OPTIONS = 'SAMEORIGIN'  # 相同站点可嵌入iframe
 
 CACHES = {
     'default': {
