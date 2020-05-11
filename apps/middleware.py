@@ -68,7 +68,6 @@ class XFrameOptionsMiddleware(MiddlewareMixin):
 
         response['X-Frame-Options'] = self.get_xframe_options_value(request,
                                                                     response)
-        print(response["X-Frame-Options"])
         return response
 
     def get_xframe_options_value(self, request, response):
