@@ -31,8 +31,17 @@
         font-size: 18px;
         font-weight: bold;
       }
+      .canclick{
+          display: inline-block;
+          cursor: pointer;
+          color: #1b93e1;
+      }
+      .canclick:last-child{
+          color: #000;
+      }
       .header .icon_seperate{
         color: #cec6c6;
+          padding: 0 5px;
       }
       .btn_group {
         text-align: right;
@@ -65,18 +74,27 @@
         border-radius: 5px;
         border: 1px solid #e6e6e6;
       }
+        .cellstyle{
+            color:#000;
+            cursor: pointer;
+        }
+        .cellstyle:hover{
+            color:#1b93e1;
+        }
     </style>
   </head>
   <body>
+  {% verbatim myblock %}
     <div id="app">
       <div class="header">
         <div>
-          <span v-if="path === ''" @click="getFileList('')">媒体库</span>
+          <span v-if="path === ''" @click="getFile('')" class="canclick">媒体库</span>
           <div v-else>
-            <span @click="getFileList('')">媒体库</span>
+            <span @click="getFile('')" class="canclick">媒体库</span>
             <span
               v-for="(item,index) in pathArr"
               @click="handleJoin(pathArr,index)"
+              class="canclick"
               ><span class="icon_seperate">/</span>{{item}}</span
             >
           </div>
@@ -94,6 +112,7 @@
           border
           style="width: 100%;"
           :header-cell-style="headerbg"
+          :cell-class-name = "cellstyle"
           stripe
         >
           <el-table-column type="index" width="50">
@@ -103,7 +122,7 @@
               ></i>
             </template>
           </el-table-column>
-          {% verbatim myblock %}
+
           <el-table-column prop="file_name" label="文件名">
             <template slot-scope="scope">
               <div v-if=" isEdit  == scope.row.file_name ">
@@ -117,10 +136,10 @@
                     <template slot="append">{{scope.row.file_name.split('.')[1]}}</template></el-input>
                 <el-input size="small" v-model="scope.row.file_name" v-else @change="closeinput(scope.row)"></el-input>
               </div>
-              <span v-else>{{scope.row.file_name}}</span>
+              <span v-else @click="handletofile(scope.row.file_name)">{{scope.row.file_name}}</span>
             </template>
           </el-table-column>
-          {% endverbatim myblock %}
+
           <el-table-column label="操作" width="100">
             <template slot-scope="scope">
               <i
@@ -139,6 +158,7 @@
         </el-table>
       </div>
     </div>
+    {% endverbatim myblock %}
     {% if "SIMPLEUI_STATIC_OFFLINE"|get_config %}
     <script type="text/javascript" src="{% static '/admin/simpleui-x/js/vue.min.js' %}"></script>
     <script type="text/javascript" src="{% static '/admin/simpleui-x/elementui/index.js' %}"></script>
@@ -211,20 +231,28 @@
           },
         },
         methods: {
+            getFile(){
+                this.path = '';
+                this.getFileList();
+            },
+            handletofile(filename){
+                this.path = this.path+'/'+filename
+                this.getFileList();
+            },
           //处理path
           handleJoin(arr, index) {
             arr.splice(index + 1, this.pathArr.length - index - 1);
-            arr.join('/')
-            this.path = '/'+arr.join('/')+'/'
-            this.getFileList(this.path)
+            arr.join('/');
+            this.path = '/'+arr.join('/')+'/';
+            this.getFileList();
           },
           //获取文件数据
-          getFileList(path) {
+          getFileList() {
             $.ajax({
               type: "post",
               url: "/core/file_system/",
               data: {
-                path,
+                path:this.path+'/',
                 method: "get",
               },
               success: (res) => {
@@ -250,6 +278,12 @@
             row.file_name =
               event.target.value + "." + row.file_name.split(".")[1];
           },
+            cellstyle({row, column, rowIndex, columnIndex}){
+                if(rowIndex >= 0 && columnIndex == 1){
+                    {#return 'color:#1b93e1;cursor: pointer;'#}
+                    return 'cellstyle'
+                }
+            },
           headerbg() {
             return "background-image: linear-gradient(to bottom , #fff 0%, #E7E7E7 10%,#fff 100%);border: 1px solid #EAEAEA";
             // if(rowIndex == 0){
@@ -258,9 +292,10 @@
           },
         },
         mounted() {
-          this.getFileList(this.path);
+          this.getFileList();
         },
       });
     </script>
   </body>
+
 </html>
