@@ -70,7 +70,6 @@ def file_system(request):
         else:
             method = request.POST.get("method", "del")
             path = MEDIA_ROOT + request.POST.get("path", "")
-            print(method, path)
             result = {"code": "200", "success": True, "msg": ""}
             if not os.path.exists(path):
                 result["success"] = False

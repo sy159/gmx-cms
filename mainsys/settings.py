@@ -69,15 +69,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'oauth2_provider.middleware.OAuth2TokenMiddleware',  # oauth认证
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'apps.middleware.XFrameOptionsMiddleware',  # 点击劫持（simple-ui默认全部变为ALLOW-FROM）
 ]
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'oauth2_provider.backends.OAuth2Backend',
 )
-
-CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
     {
@@ -127,6 +126,7 @@ USE_L10N = True  # 用于决定是否开启数据本地化。如果此设置为T
 LANGUAGE_CODE = "zh-hans"  # 简体中文
 # LANGUAGE_CODE = "zh-hant"  # 繁体中文
 X_FRAME_OPTIONS = 'SAMEORIGIN'  # 相同站点可嵌入iframe
+CORS_ORIGIN_ALLOW_ALL = True  # oauth2跨域使用
 
 CACHES = {
     'default': {
