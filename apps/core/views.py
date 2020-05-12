@@ -112,10 +112,11 @@ def file_system(request):
                     file_name_list = []
                     result["msg"] = "该文件不存在"
                 for file_name in file_name_list:
+                    is_dir = os.path.isdir(file_path + "/" + file_name)
                     file_info_list.append({
                         "file_name": file_name,
-                        "is_dir": os.path.isdir(file_path + "/" + file_name),
-                        "file_size": os.path.getsize(file_path  + "/" + file_name) // 1024,
+                        "is_dir": is_dir,
+                        "file_size": "{}kb".format(os.path.getsize(file_path  + "/" + file_name) // 1024) if not is_dir else "",
                         "create": ""
                     })
                 result["data"] = file_info_list
