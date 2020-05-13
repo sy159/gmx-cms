@@ -17,6 +17,9 @@
     {% endif %}
 
     <style>
+      [v-cloak] {
+        display: none !important;
+      }
       .el-breadcrumb {
         font-size: 18px;
       }
@@ -89,7 +92,7 @@
       <div class="header">
         <div>
           <span v-if="path === ''" @click="getFile('')" class="canclick">媒体库</span>
-          <div v-else>
+          <div v-else v-cloak>
             <span @click="getFile('')" class="canclick">媒体库</span>
             <span
               v-for="(item,index) in pathArr"
@@ -99,6 +102,7 @@
             >
           </div>
         </div>
+      </div>
       <div class="btn_group">
         <el-button type="info" plain>创建文件夹</el-button>
         <el-button type="primary">上传</el-button>
