@@ -71,7 +71,7 @@ def file_system(request):
             method = request.POST.get("method", "del")
             path = MEDIA_ROOT + request.POST.get("path", "")
             result = {"code": "200", "success": True, "msg": ""}
-            if not os.path.exists(path):
+            if method != "add_dir" and not os.path.exists(path):
                 result["success"] = False
                 result["msg"] = "该文件或者目录不存在"
                 return JsonResponse(result, safe=False)
@@ -98,8 +98,11 @@ def file_system(request):
                     for content in wl_file.chunks():
                         f.write(content)
             elif method == "add_dir":  # 新建文件夹
-                os.mkdir(path)
-                pass
+                if os.path.exists(path):
+                    result["success"] = False
+                    result["msg"] = "该文件夹已存在"
+                else:
+                    os.mkdir(path)
             elif method == "rename":
                 os.rename(r"E:\zzq_project\gmx\media\test.py", r"E:\zzq_project\gmx\media\test22.py")
                 pass

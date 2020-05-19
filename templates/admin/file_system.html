@@ -1,274 +1,330 @@
 {% load i18n static simpletags %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>文件管理系统</title>
     {% if "SIMPLEUI_STATIC_OFFLINE"|get_config %}
-    <link
-      rel="stylesheet"
-      href="{% static '/admin/simpleui-x/elementui/theme-chalk/index.css' %}"
-    />
+        <link
+                rel="stylesheet"
+                href="{% static '/admin/simpleui-x/elementui/theme-chalk/index.css' %}"
+        />
     {% else %}
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
-    />
+        <link
+                rel="stylesheet"
+                href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+        />
     {% endif %}
 
     <style>
-      [v-cloak] {
-        display: none !important;
-      }
-      .el-breadcrumb {
-        font-size: 18px;
-      }
-      .icon {
-        margin: 0 10px;
-        font-size: 18px;
-        color: #a0c5e8;
-        cursor: pointer;
-      }
-      .header {
-        padding: 20px 30px 0 30px;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      .canclick{
-          display: inline-block;
-          cursor: pointer;
-          color: #1b93e1;
-      }
-      .canclick:last-child{
-          color: #000;
-      }
-      .header .icon_seperate{
-        color: #cec6c6;
-          padding: 0 5px;
-      }
-      .btn_group {
-        text-align: right;
-        padding: 5px 30px;
-      }
-      .content {
-        margin: 20px 30px;
-      }
-      .search_box {
-        border-radius: 10px;
-        border: 1px solid #e6e6e6;
-        overflow: hidden;
-        font-size: 14px;
-      }
-      .search_title {
-        background-image: linear-gradient(
-          to bottom,
-          #fff 0%,
-          #e7e7e7 10%,
-          #fff 100%
-        );
-        border-bottom: 1px solid #e6e6e6;
-        padding: 5px 10px;
-      }
-      .search_content {
-        padding: 10px;
-      }
-      .search_input {
-        height: 20px;
-        border-radius: 5px;
-        border: 1px solid #e6e6e6;
-      }
-        .cellstyle{
-            color:#000;
+        [v-cloak] {
+            display: none !important;
+        }
+        .el-breadcrumb {
+            font-size: 18px;
+        }
+        .icon {
+            margin: 0 10px;
+            font-size: 18px;
+            color: #a0c5e8;
             cursor: pointer;
         }
-        .cellstyle:hover{
-            color:#1b93e1;
+        .header {
+            padding: 20px 30px 0 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .canclick {
+            display: inline-block;
+            cursor: pointer;
+            color: #1b93e1;
+        }
+        .canclick:last-child {
+            color: #000;
+        }
+        .header .icon_seperate {
+            color: #cec6c6;
+            padding: 0 5px;
+        }
+        .btn_group {
+            text-align: right;
+            padding: 5px 30px;
+        }
+        .content {
+            margin: 20px 30px;
+        }
+        .search_box {
+            border-radius: 10px;
+            border: 1px solid #e6e6e6;
+            overflow: hidden;
+            font-size: 14px;
+        }
+        .search_title {
+            background-image: linear-gradient(
+                    to bottom,
+                    #fff 0%,
+                    #e7e7e7 10%,
+                    #fff 100%
+            );
+            border-bottom: 1px solid #e6e6e6;
+            padding: 5px 10px;
+        }
+        .search_content {
+            padding: 10px;
+        }
+        .search_input {
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid #e6e6e6;
+        }
+        .cellstyle {
+            color: #000;
+            cursor: pointer;
+        }
+        .cellstyle:hover {
+            color: #1b93e1;
         }
     </style>
-  </head>
-  <body>
-  {% verbatim myblock %}
+</head>
+<body>
+{% verbatim myblock %}
     <div id="app">
-      <div class="header">
-        <div>
-          <span v-if="path === ''" @click="getFile('')" class="canclick">媒体库</span>
-          <div v-else v-cloak>
-            <span @click="getFile('')" class="canclick">媒体库</span>
-            <span
-              v-for="(item,index) in pathArr"
-              @click="handleJoin(pathArr,index)"
-              class="canclick"
-              ><span class="icon_seperate">/</span>{{item}}</span
-            >
-          </div>
+        <div class="header">
+            <div>
+                <span v-if="path === ''" @click="getFile('')" class="canclick">媒体库</span>
+                <div v-else v-cloak>
+                    <span @click="getFile('')" class="canclick">媒体库</span>
+                    <span
+                            v-for="(item,index) in pathArr"
+                            @click="handleJoin(pathArr,index)"
+                            class="canclick"
+                    ><span class="icon_seperate">/</span>{{ item }}</span
+                    >
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="btn_group">
-        <el-button type="info" plain>创建文件夹</el-button>
-        <el-button type="primary">上传</el-button>
-      </div>
+        <div class="btn_group">
+            <el-button type="info" plain @click="creatFile">创建文件夹</el-button>
+            <el-button type="primary">上传</el-button>
+        </div>
 
-      <div class="content">
-        <!-- <el-row :gutter="20"> -->
-        <!-- <el-col :span="20"> -->
-        <el-table
-          :data="tableData"
-          border
-          style="width: 100%;"
-          :header-cell-style="headerbg"
-          :cell-class-name = "cellstyle"
-          stripe
-        >
-          <el-table-column type="index" width="50">
-            <template slot-scope="scope">
-              <i
-                :class="scope.row.is_dir ? 'el-icon-folder' : 'el-icon-document-remove' "
-              ></i>
-            </template>
-          </el-table-column>
+        <div class="content">
+            <!-- <el-row :gutter="20"> -->
+            <!-- <el-col :span="20"> -->
+            <el-table
+                    :data="tableData"
+                    border
+                    style="width: 100%;"
+                    :header-cell-style="headerbg"
+                    :cell-class-name="cellstyle"
+                    stripe
+            >
+                <el-table-column type="index" width="50">
+                    <template slot-scope="scope">
+                        <i
+                                :class="scope.row.is_dir ? 'el-icon-folder' : 'el-icon-document-remove' "
+                        ></i>
+                    </template>
+                </el-table-column>
 
-          <el-table-column prop="file_name" label="文件名">
-            <template slot-scope="scope">
-              <div v-if=" isEdit  == scope.row.file_name ">
-                <el-input
-                  size="small"
-                  v-if="!scope.row.is_dir"
-                  :value="scope.row.file_name.split('.')[0]"
-                  @input="handleChange(scope.row)"
-                  @blur="closeinput(scope.row)"
-                >
-                    <template slot="append">{{scope.row.file_name.split('.')[1]}}</template></el-input>
-                <el-input size="small" v-model="scope.row.file_name" v-else @change="closeinput(scope.row)"></el-input>
-              </div>
-              <span v-else @click="handletofile(scope.row.file_name)">{{scope.row.file_name}}</span>
-            </template>
-          </el-table-column>
+                <el-table-column prop="file_name" label="文件名">
+                    <template slot-scope="scope">
+                        <div v-if=" isEdit  == scope.row.file_name ">
+                            <el-input
+                                    size="small"
+                                    v-if="!scope.row.is_dir"
+                                    :value="scope.row.file_name.split('.')[0]"
+                                    @input="handleChange(scope.row)"
+                                    @blur="closeinput(scope.row)"
+                            >
+                                <template slot="append">{{ scope.row.file_name.split('.')[1]}}</template>
+                            </el-input>
+                            <el-input size="small" v-model="scope.row.file_name" v-else @change="closeinput(scope.row)"></el-input>
+                        </div>
+                        <span v-else @click="handletofile(scope.row.file_name)">{{ scope.row.file_name }}</span>
+                    </template>
+                </el-table-column>
 
-          <el-table-column label="操作" width="100">
-            <template slot-scope="scope">
-              <i
-                class="el-icon-edit icon"
-                @click="handleEdit(scope.row.file_name)"
-              ></i>
-            </template>
-          </el-table-column>
-          <el-table-column prop="file_size" label="大小"> </el-table-column>
-          <el-table-column prop="create" label="日期"> </el-table-column>
-          <el-table-column label="操作" width="100">
-            <template slot-scope="scope">
-              <i class="el-icon-delete icon"></i>
-            </template>
-          </el-table-column>
-        </el-table>
-      </div>
+                <el-table-column label="操作" width="100">
+                    <template slot-scope="scope">
+                        <i
+                                class="el-icon-edit icon"
+                                @click="handleEdit(scope.row.file_name)"
+                        ></i>
+                    </template>
+                </el-table-column>
+                <el-table-column prop="file_size" label="大小"></el-table-column>
+                <el-table-column prop="create" label="日期"></el-table-column>
+                <el-table-column label="操作" width="100">
+                    <template slot-scope="scope">
+                        <i class="el-icon-delete icon"></i>
+                    </template>
+                </el-table-column>
+            </el-table>
+        </div>
+
+        <el-dialog title="新建文件夹" :visible.sync="dialogFormVisible">
+            <el-form :model="form" :rules="rules" ref="form">
+                <el-form-item prop="filename">
+                    <el-input v-model="form.filename" autocomplete="off" minlength="1"></el-input>
+                </el-form-item>
+            </el-form>
+            <div slot="footer" class="dialog-footer">
+                <el-button @click="dialogFormVisible = false">取 消</el-button>
+                <el-button type="primary" @click="createFileSure('form')">确 定</el-button>
+            </div>
+        </el-dialog>
+
     </div>
-    {% endverbatim myblock %}
-    {% if "SIMPLEUI_STATIC_OFFLINE"|get_config %}
+{% endverbatim myblock %}
+{% if "SIMPLEUI_STATIC_OFFLINE"|get_config %}
     <script type="text/javascript" src="{% static '/admin/simpleui-x/js/vue.min.js' %}"></script>
     <script type="text/javascript" src="{% static '/admin/simpleui-x/elementui/index.js' %}"></script>
-    {% else %}
+{% else %}
     <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.js"></script>
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    {% endif %}
-    <script
-      type="text/javascript"
-      src="{% static '/admin/js/vendor/jquery/jquery.min.js' %}"
-    ></script>
-    <script>
-      //去掉空值
-      Array.prototype.notempty = function () {
+{% endif %}
+<script
+        type="text/javascript"
+        src="{% static '/admin/js/vendor/jquery/jquery.min.js' %}"
+></script>
+<script>
+    //去掉空值
+    Array.prototype.notempty = function () {
         var arr = [];
         this.map(function (val, index) {
-          //过滤规则为，不为空串、不为null、不为undefined，也可自行修改
-          if (val !== "" && val != undefined) {
-            arr.push(val);
-          }
+            //过滤规则为，不为空串、不为null、不为undefined，也可自行修改
+            if (val !== "" && val != undefined) {
+                arr.push(val);
+            }
         });
         return arr;
-      };
-      const app = new Vue({
+    };
+    const app = new Vue({
         el: "#app",
         data: {
-          path: "", //当前目录
-          isEdit: "",
-          tableData: [],
+            dialogFormVisible: false,//弹框
+            form: {
+                filename: ""
+            },//新建文件夹的名字
+            rules: {
+                filename: [
+                    { required: true, message: '请输入新建的文件夹名字', trigger: 'blur' }
+                  ],
+            },
+            path: "", //当前目录
+            isEdit: "",
+            tableData: [],
         },
         computed: {
-          pathArr() {
-            if (this.path !== "") {
-              let patharr = this.path.split("/").notempty();
-              return patharr;
-            } else {
-              return;
-            }
-          },
+            pathArr() {
+                if (this.path !== "") {
+                    let patharr = this.path.split("/").notempty();
+                    return patharr;
+                } else {
+                    return;
+                }
+            },
         },
         methods: {
-            getFile(){
+            getFile() {
                 this.path = '';
                 this.getFileList();
             },
-            handletofile(filename){
-                this.path = this.path+'/'+filename
+            handletofile(filename) {
+                if (filename.indexOf('.') == -1) {
+                    this.path = this.path + '/' + filename;
+                    this.getFileList();
+                } else {
+                    let url = `${window.location.host}/media${this.path}/${filename}`;
+                    window.open(`http://${url}`)
+                }
+            },
+            //处理path
+            handleJoin(arr, index) {
+                arr.splice(index + 1, this.pathArr.length - index - 1);
+                arr.join('/');
+                this.path = '/' + arr.join('/') + '/';
                 this.getFileList();
             },
-          //处理path
-          handleJoin(arr, index) {
-            arr.splice(index + 1, this.pathArr.length - index - 1);
-            arr.join('/');
-            this.path = '/'+arr.join('/')+'/';
-            this.getFileList();
-          },
-          //获取文件数据
-          getFileList() {
-            $.ajax({
-              type: "post",
-              url: "/core/file_system/",
-              data: {
-                path:this.path+'/',
-                method: "get",
-              },
-              success: (res) => {
-                if (res.success == true) {
-                  this.tableData = res.data;
-                }
-              },
-              error: (err) => {
-                console.log(err);
-              },
-            });
-          },
-          //编辑文件名
-          handleEdit(name) {
-            this.isEdit = name;
-          },
-          closeinput(row) {
-            console.log(row);
-            this.isEdit = "";
-          },
-          handleChange(row) {
-            // console.log(event.target.value);
-            row.file_name =
-              event.target.value + "." + row.file_name.split(".")[1];
-          },
-            cellstyle({row, column, rowIndex, columnIndex}){
-                if(rowIndex >= 0 && columnIndex == 1){
-                    {#return 'color:#1b93e1;cursor: pointer;'#}
+            //获取文件夹数据
+            getFileList() {
+                $.ajax({
+                    type: "post",
+                    url: "/core/file_system/",
+                    data: {
+                        path: this.path + '/',
+                        method: "get",
+                    },
+                    success: (res) => {
+                        if (res.success == true) {
+                            this.tableData = res.data;
+                        }
+                    },
+                    error: (err) => {
+                        console.log(err);
+                    },
+                });
+            },
+            //创建文件夹
+            creatFile(){
+                this.dialogFormVisible = true;
+            },
+            createFileSure(form){
+                this.dialogFormVisible = false;
+                  this.$refs[form].validate((valid) => {
+                          if (valid) {
+                            console.log(this.form.filename);
+                            $.ajax({
+                            type: "post",
+                            url: "/core/file_system/",
+                            data: {
+                                path: this.path + '/'+this.form.filename + '/',
+                                method: "add_dir",
+                            },
+                            success: (res) => {
+                                if (res.success == true) {
+                                    console.log('success')
+                                }
+                            },
+                            error: (err) => {
+                                console.log(err);
+                            },
+                        });
+                                  } else {
+                                    return false;
+                                  }
+                        });
+            },
+            //编辑文件名
+            handleEdit(name) {
+                this.isEdit = name;
+            },
+            closeinput(row) {
+                this.isEdit = "";
+            },
+            handleChange(row) {
+                // console.log(event.target.value);
+                row.file_name =
+                    event.target.value + "." + row.file_name.split(".")[1];
+            },
+            cellstyle({row, column, rowIndex, columnIndex}) {
+                if (rowIndex >= 0 && columnIndex == 1) {
                     return 'cellstyle'
                 }
             },
-          headerbg() {
-            return "background-image: linear-gradient(to bottom , #fff 0%, #E7E7E7 10%,#fff 100%);border: 1px solid #EAEAEA";
-            // if(rowIndex == 0){
-            //   return ""
-            // }
-          },
+            headerbg() {
+                return "background-image: linear-gradient(to bottom , #fff 0%, #E7E7E7 10%,#fff 100%);border: 1px solid #EAEAEA";
+                // if(rowIndex == 0){
+                //   return ""
+                // }
+            },
         },
         mounted() {
-          this.getFileList();
+            this.getFileList();
         },
-      });
-    </script>
-  </body>
+    });
+</script>
+</body>
 
 </html>
