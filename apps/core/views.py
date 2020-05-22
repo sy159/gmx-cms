@@ -78,18 +78,20 @@ def file_system(request):
             if method == "del":  # 删除文件夹或文件
                 try:
                     if os.path.isdir(path):  # 如果是文件夹
-                        os.removedirs(path)
+                        import shutil
+                        shutil.rmtree(path=path)  # 递归删除文件夹
+                        # os.removedirs(path)  # 删除文件夹，如果子级有不为空，就会OSError异常
                     else:
                         os.unlink(path)
-                except Exception as e:
-                    result["msg"] = e
+                except OSError:
+                    result["msg"] = "文件或目录删除失败"
                     result["success"] = False
             elif method == "add_file":  # 上传文件
                 wl_file = request.FILES.get("file", None)
                 if not os.path.isdir(path):
                     result["success"] = False
                     result["msg"] = "该目录不存在"
-                all_files = filter(lambda files:os.path.isfile(f"{path}/{files}"), os.listdir(path))
+                all_files = filter(lambda files: os.path.isfile(f"{path}/{files}"), os.listdir(path))
                 if wl_file.name in all_files:  # 重名
                     result["success"] = False
                     result["msg"] = "文件名已存在"
@@ -104,8 +106,13 @@ def file_system(request):
                 else:
                     os.mkdir(path)
             elif method == "rename":
-                os.rename(r"E:\zzq_project\gmx\media\test.py", r"E:\zzq_project\gmx\media\test22.py")
-                pass
+                new_name = request.POST.get("new_name")
+                old_name = request.POST.get("old_name")
+                if not old_name or not new_name:
+                    result["msg"] = "文件或目录名不能为空"
+                    result["success"] = False
+                else:
+                    os.rename(path + old_name, path + new_name)
             elif method == "get":
                 file_info_list = []
                 file_path = MEDIA_ROOT + request.POST.get("path", "")
@@ -119,7 +126,7 @@ def file_system(request):
                     file_info_list.append({
                         "file_name": file_name,
                         "is_dir": is_dir,
-                        "file_size": "{}kb".format(os.path.getsize(file_path  + "/" + file_name) // 1024) if not is_dir else "",
+                        "file_size": "{}kb".format(os.path.getsize(file_path + "/" + file_name) // 1024) if not is_dir else "",
                         "create": ""
                     })
                 result["data"] = file_info_list

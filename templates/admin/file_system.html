@@ -129,17 +129,17 @@
 
                 <el-table-column prop="file_name" label="文件名">
                     <template slot-scope="scope">
-                        <div v-if=" isEdit  == scope.row.file_name ">
+                        <div v-if=" isEdit  == scope.$index ">
                             <el-input
                                     size="small"
                                     v-if="!scope.row.is_dir"
-                                    :value="scope.row.file_name.split('.')[0]"
+                                    :value="scope.$index"
                                     @input="handleChange(scope.row)"
-                                    @blur="closeinput(scope.row)"
+                                    @blur="closeinput(scope.row.file_name)"
                             >
                                 <template slot="append">{{ scope.row.file_name.split('.')[1]}}</template>
                             </el-input>
-                            <el-input size="small" v-model="scope.row.file_name" v-else @change="closeinput(scope.row)"></el-input>
+                            <el-input size="small" v-model="scope.row.file_name" v-else @change="closeinput(scope.row.file_name)"></el-input>
                         </div>
                         <span v-else @click="handletofile(scope.row.file_name)">{{ scope.row.file_name }}</span>
                     </template>
@@ -149,7 +149,7 @@
                     <template slot-scope="scope">
                         <i
                                 class="el-icon-edit icon"
-                                @click="handleEdit(scope.row.file_name)"
+                                @click="handleEdit(scope.$index,scope.row.file_name)"
                         ></i>
                     </template>
                 </el-table-column>
@@ -157,7 +157,7 @@
                 <el-table-column prop="create" label="日期"></el-table-column>
                 <el-table-column label="操作" width="100">
                     <template slot-scope="scope">
-                        <i class="el-icon-delete icon"></i>
+                        <i class="el-icon-delete icon" @click="handleDelete(scope.row.file_name,scope.row.is_dir)"></i>
                     </template>
                 </el-table-column>
             </el-table>
@@ -209,11 +209,12 @@
             },//新建文件夹的名字
             rules: {
                 filename: [
-                    { required: true, message: '请输入新建的文件夹名字', trigger: 'blur' }
-                  ],
+                    {required: true, message: '请输入新建的文件夹名字', trigger: 'blur'}
+                ],
             },
             path: "", //当前目录
-            isEdit: "",
+            isEdit: -1,
+            oldName: "",
             tableData: [],
         },
         computed: {
@@ -267,44 +268,108 @@
                 });
             },
             //创建文件夹
-            creatFile(){
+            creatFile() {
                 this.dialogFormVisible = true;
             },
-            createFileSure(form){
+            createFileSure(form) {
                 this.dialogFormVisible = false;
-                  this.$refs[form].validate((valid) => {
-                          if (valid) {
-                            console.log(this.form.filename);
-                            $.ajax({
+                this.$refs[form].validate((valid) => {
+                    if (valid) {
+                        $.ajax({
                             type: "post",
                             url: "/core/file_system/",
                             data: {
-                                path: this.path + '/'+this.form.filename + '/',
+                                path: this.path + '/' + this.form.filename + '/',
                                 method: "add_dir",
                             },
                             success: (res) => {
                                 if (res.success == true) {
-                                    console.log('success')
+                                    this.$alert('创建成功！', {
+                                        confirmButtonText: '确定',
+                                        callback: action => {
+                                            this.getFileList();
+                                        }
+                                    });
+                                } else {
+                                    this.$alert(res.msg, {
+                                        confirmButtonText: '确定',
+                                    });
                                 }
                             },
                             error: (err) => {
                                 console.log(err);
                             },
                         });
-                                  } else {
-                                    return false;
-                                  }
-                        });
+                    } else {
+                        return false;
+                    }
+                });
+            },
+            //删除文件
+            handleDelete(name, ifdir) {
+                let paramspath = ifdir ? this.path + '/' + name + '/' : this.path + '/' + name;
+                $.ajax({
+                    type: "post",
+                    url: "/core/file_system/",
+                    data: {
+                        path: paramspath,
+                        method: "del",
+                    },
+                    success: (res) => {
+                        if (res.success == true) {
+                            this.$alert('删除成功！', {
+                                confirmButtonText: '确定',
+                                callback: action => {
+                                    this.getFileList();
+                                }
+                            });
+                        } else {
+                            this.$alert(res.msg, {
+                                confirmButtonText: '确定',
+                            });
+                        }
+                    },
+                    error: (err) => {
+                        console.log(err);
+                    },
+                });
             },
             //编辑文件名
-            handleEdit(name) {
-                this.isEdit = name;
+            handleEdit(index, name) {
+                this.isEdit = index;
+                this.oldName = name;
             },
-            closeinput(row) {
-                this.isEdit = "";
+            closeinput(name) {
+                this.isEdit = -1;
+                $.ajax({
+                    type: "post",
+                    url: "/core/file_system/",
+                    data: {
+                        path: this.path + "/",
+                        old_name: this.oldName,
+                        new_name: name,
+                        method: "rename",
+                    },
+                    success: (res) => {
+                        if (res.success == true) {
+                            this.$alert('修改成功！', {
+                                confirmButtonText: '确定',
+                                callback: action => {
+                                    this.getFileList();
+                                }
+                            });
+                        } else {
+                            this.$alert(res.msg, {
+                                confirmButtonText: '确定',
+                            });
+                        }
+                    },
+                    error: (err) => {
+                        console.log(err);
+                    },
+                });
             },
             handleChange(row) {
-                // console.log(event.target.value);
                 row.file_name =
                     event.target.value + "." + row.file_name.split(".")[1];
             },
