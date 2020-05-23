@@ -131,17 +131,19 @@
                     <template slot-scope="scope">
                         <div v-if=" isEdit  == scope.$index ">
                             <el-input
-                                    size="small"
                                     v-if="!scope.row.is_dir"
-                                    :value="scope.$index"
+                                    :ref="scope.row.file_name"
+                                    size="small"
+                                    :value="scope.row.file_name.split('.')[0]"
                                     @input="handleChange(scope.row)"
-                                    @blur="closeinput(scope.row.file_name)"
+                                    @blur=" closeinput(scope.row.file_name)"
                             >
                                 <template slot="append">{{ scope.row.file_name.split('.')[1]}}</template>
                             </el-input>
-                            <el-input size="small" v-model="scope.row.file_name" v-else @change="closeinput(scope.row.file_name)"></el-input>
+                            <el-input v-else :ref="scope.row.file_name" size="small" v-model="scope.row.file_name" @blur="closeinput(scope.row.file_name)"
+                                      @change="closeinput(scope.row.file_name)"></el-input>
                         </div>
-                        <span v-else @click="handletofile(scope.row.file_name)">{{ scope.row.file_name }}</span>
+                        <span v-else @click="handletofile(scope.row.file_name,scope.row.is_dir)">{{ scope.row.file_name }}</span>
                     </template>
                 </el-table-column>
 
@@ -232,8 +234,8 @@
                 this.path = '';
                 this.getFileList();
             },
-            handletofile(filename) {
-                if (filename.indexOf('.') == -1) {
+            handletofile(filename, isdir) {
+                if (isdir) {
                     this.path = this.path + '/' + filename;
                     this.getFileList();
                 } else {
@@ -338,40 +340,48 @@
             handleEdit(index, name) {
                 this.isEdit = index;
                 this.oldName = name;
+                this.$nextTick(() => {
+                    this.$refs[name].focus()
+                })
+
             },
             closeinput(name) {
                 this.isEdit = -1;
-                $.ajax({
-                    type: "post",
-                    url: "/core/file_system/",
-                    data: {
-                        path: this.path + "/",
-                        old_name: this.oldName,
-                        new_name: name,
-                        method: "rename",
-                    },
-                    success: (res) => {
-                        if (res.success == true) {
-                            this.$alert('修改成功！', {
-                                confirmButtonText: '确定',
-                                callback: action => {
-                                    this.getFileList();
-                                }
-                            });
-                        } else {
-                            this.$alert(res.msg, {
-                                confirmButtonText: '确定',
-                            });
-                        }
-                    },
-                    error: (err) => {
-                        console.log(err);
-                    },
-                });
+                if (name == this.oldName) {
+                    return;
+                } else {
+                    $.ajax({
+                        type: "post",
+                        url: "/core/file_system/",
+                        data: {
+                            path: this.path + "/",
+                            old_name: this.oldName,
+                            new_name: name,
+                            method: "rename",
+                        },
+                        success: (res) => {
+                            if (res.success == true) {
+                                this.$alert('修改成功！', {
+                                    confirmButtonText: '确定',
+                                    callback: action => {
+                                        this.getFileList();
+                                    }
+                                });
+                            } else {
+                                this.$alert(res.msg, {
+                                    confirmButtonText: '确定',
+                                });
+                            }
+                        },
+                        error: (err) => {
+                            console.log(err);
+                        },
+                    });
+                }
+
             },
             handleChange(row) {
-                row.file_name =
-                    event.target.value + "." + row.file_name.split(".")[1];
+                row.file_name = event.target.value + '.' + row.file_name.split('.')[1]
             },
             cellstyle({row, column, rowIndex, columnIndex}) {
                 if (rowIndex >= 0 && columnIndex == 1) {
