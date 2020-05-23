@@ -68,7 +68,7 @@ def file_system(request):
         if request.method == "GET":
             return render(request, "admin/file_system.html")
         else:
-            method = request.POST.get("method", "del")
+            method = request.POST.get("method", "get")
             path = MEDIA_ROOT + request.POST.get("path", "")
             result = {"code": "200", "success": True, "msg": ""}
             if method != "add_dir" and not os.path.exists(path):
@@ -77,6 +77,8 @@ def file_system(request):
                 return JsonResponse(result, safe=False)
             if method == "del":  # 删除文件夹或文件
                 try:
+                    if path == "/":  # 删除跟目录
+                        raise OSError("根目录不允许删除")
                     if os.path.isdir(path):  # 如果是文件夹
                         import shutil
                         shutil.rmtree(path=path)  # 递归删除文件夹
@@ -86,7 +88,8 @@ def file_system(request):
                 except OSError:
                     result["msg"] = "文件或目录删除失败"
                     result["success"] = False
-            elif method == "add_file":  # 上传文件
+            elif method == "upload_file":  # 上传文件
+                # wl_files = request.FILES.getlist("files", None)  # 多文件上传
                 wl_file = request.FILES.get("file", None)
                 if not os.path.isdir(path):
                     result["success"] = False
@@ -94,7 +97,7 @@ def file_system(request):
                 all_files = filter(lambda files: os.path.isfile(f"{path}/{files}"), os.listdir(path))
                 if wl_file.name in all_files:  # 重名
                     result["success"] = False
-                    result["msg"] = "文件名已存在"
+                    result["msg"] = "该文件已存在"
                     return JsonResponse(result)
                 with open(f"{path}/{wl_file.name}", "wb+") as f:
                     for content in wl_file.chunks():
