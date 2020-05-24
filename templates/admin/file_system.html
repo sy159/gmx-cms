@@ -49,6 +49,11 @@
         .btn_group {
             text-align: right;
             padding: 5px 30px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .btn_group .upload-demo {
+            margin-left: 20px;
         }
         .content {
             margin: 20px 30px;
@@ -105,7 +110,17 @@
         </div>
         <div class="btn_group">
             <el-button type="info" plain @click="creatFile">创建文件夹</el-button>
-            <el-button type="primary">上传</el-button>
+            <el-upload
+                    action="/core/file_system/"
+                    :data='upload_data'
+                    name="file"
+                    :show-file-list="false"
+                    :on-success="uploadSuccess"
+                    :on-error="uploadFail"
+                    class="upload-demo">
+                <el-button type="primary">上传</el-button>
+            </el-upload>
+
         </div>
 
         <div class="content">
@@ -202,6 +217,29 @@
         });
         return arr;
     };
+
+    //请求公共函数
+    function request(type, url, data) {
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                type: type,
+                url: url,
+                data: data,
+                success: (res) => {
+                    if (res.success == true) {
+                        resolve(res)
+                    } else {
+                        reject(res)
+                    }
+                },
+                error: (err) => {
+                    console.log(err);
+                },
+            });
+        })
+
+    }
+
     const app = new Vue({
         el: "#app",
         data: {
@@ -219,6 +257,9 @@
             oldName: "",
             tableData: [],
         },
+        mounted() {
+
+        },
         computed: {
             pathArr() {
                 if (this.path !== "") {
@@ -228,6 +269,9 @@
                     return;
                 }
             },
+            upload_data() {
+                return {method: "upload_file", path: this.path}
+            }
         },
         methods: {
             getFile() {
@@ -252,22 +296,15 @@
             },
             //获取文件夹数据
             getFileList() {
-                $.ajax({
-                    type: "post",
-                    url: "/core/file_system/",
-                    data: {
-                        path: this.path + '/',
-                        method: "get",
-                    },
-                    success: (res) => {
-                        if (res.success == true) {
-                            this.tableData = res.data;
-                        }
-                    },
-                    error: (err) => {
-                        console.log(err);
-                    },
-                });
+                let data = {
+                    path: this.path + '/',
+                    method: "get",
+                };
+                request("post", "/core/file_system/", data).then(res => {
+                    this.tableData = res.data;
+                }).catch(err => {
+                    console.log(err)
+                })
             },
             //创建文件夹
             creatFile() {
@@ -277,31 +314,22 @@
                 this.dialogFormVisible = false;
                 this.$refs[form].validate((valid) => {
                     if (valid) {
-                        $.ajax({
-                            type: "post",
-                            url: "/core/file_system/",
-                            data: {
-                                path: this.path + '/' + this.form.filename + '/',
-                                method: "add_dir",
-                            },
-                            success: (res) => {
-                                if (res.success == true) {
-                                    this.$alert('创建成功！', {
-                                        confirmButtonText: '确定',
-                                        callback: action => {
-                                            this.getFileList();
-                                        }
-                                    });
-                                } else {
-                                    this.$alert(res.msg, {
-                                        confirmButtonText: '确定',
-                                    });
+                        let data = {
+                            path: this.path + '/' + this.form.filename + '/',
+                            method: "add_dir",
+                        };
+                        request("post", "/core/file_system/", data).then(res => {
+                            this.$alert('创建成功！', {
+                                confirmButtonText: '确定',
+                                callback: action => {
+                                    this.getFileList();
                                 }
-                            },
-                            error: (err) => {
-                                console.log(err);
-                            },
-                        });
+                            });
+                        }).catch(err => {
+                            this.$alert(err.msg, {
+                                confirmButtonText: '确定',
+                            });
+                        })
                     } else {
                         return false;
                     }
@@ -310,31 +338,23 @@
             //删除文件
             handleDelete(name, ifdir) {
                 let paramspath = ifdir ? this.path + '/' + name + '/' : this.path + '/' + name;
-                $.ajax({
-                    type: "post",
-                    url: "/core/file_system/",
-                    data: {
-                        path: paramspath,
-                        method: "del",
-                    },
-                    success: (res) => {
-                        if (res.success == true) {
-                            this.$alert('删除成功！', {
-                                confirmButtonText: '确定',
-                                callback: action => {
-                                    this.getFileList();
-                                }
-                            });
-                        } else {
-                            this.$alert(res.msg, {
-                                confirmButtonText: '确定',
-                            });
+                let data = {
+                    path: paramspath,
+                    method: "del",
+                };
+                request("post", "/core/file_system/", data).then(res => {
+                    this.$alert('删除成功！', {
+                        confirmButtonText: '确定',
+                        callback: action => {
+                            this.getFileList();
                         }
-                    },
-                    error: (err) => {
-                        console.log(err);
-                    },
-                });
+                    });
+                }).catch(err => {
+                    this.$alert(err.msg, {
+                        confirmButtonText: '确定',
+                    });
+                })
+
             },
             //编辑文件名
             handleEdit(index, name) {
@@ -350,38 +370,44 @@
                 if (name == this.oldName) {
                     return;
                 } else {
-                    $.ajax({
-                        type: "post",
-                        url: "/core/file_system/",
-                        data: {
-                            path: this.path + "/",
-                            old_name: this.oldName,
-                            new_name: name,
-                            method: "rename",
-                        },
-                        success: (res) => {
-                            if (res.success == true) {
-                                this.$alert('修改成功！', {
-                                    confirmButtonText: '确定',
-                                    callback: action => {
-                                        this.getFileList();
-                                    }
-                                });
-                            } else {
-                                this.$alert(res.msg, {
-                                    confirmButtonText: '确定',
-                                });
+                    let data = {
+                        path: this.path + "/",
+                        old_name: this.oldName,
+                        new_name: name,
+                        method: "rename",
+                    };
+                    request("post", "/core/file_system/", data).then(res => {
+                        this.$alert('修改成功！', {
+                            confirmButtonText: '确定',
+                            callback: action => {
+                                this.getFileList();
                             }
-                        },
-                        error: (err) => {
-                            console.log(err);
-                        },
-                    });
+                        });
+                    }).catch(err => {
+                        this.$alert(err.msg, {
+                            confirmButtonText: '确定',
+                        });
+                    })
                 }
 
             },
             handleChange(row) {
                 row.file_name = event.target.value + '.' + row.file_name.split('.')[1]
+            },
+            //上传文件成功
+            uploadSuccess() {
+                this.$alert('上传成功！', {
+                    confirmButtonText: '确定',
+                    callback: action => {
+                        this.getFileList();
+                    }
+                });
+            },
+            //文件上传失败
+            uploadFail() {
+                this.$alert('上传失败！', {
+                    confirmButtonText: '确定',
+                });
             },
             cellstyle({row, column, rowIndex, columnIndex}) {
                 if (rowIndex >= 0 && columnIndex == 1) {
