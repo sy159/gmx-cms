@@ -1,5 +1,8 @@
 # 本文件记录系统相关配置
 
+# 重新分配
+SECRET_KEY = "l*8!si1_0)23jy@+7o68t+&dnz^sc)r^tm0_efh=#=gh45&^ics3452345"
+
 FILE_UPLOAD_PERMISSIONS = 0o644  # 文件上传权限
 FILE_UPLOAD_MAX_MEMORY_SIZE = 8388608  # 最大文件上传size
 

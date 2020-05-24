@@ -8,6 +8,7 @@ class WebSettings(models.Model):
     DEBUG = models.CharField('是否启用调试', null=True, max_length=5, default='True', choices=(('False', "否"), ('True', "是")))
     ALLOWED_HOSTS = models.CharField('授权的域名', max_length=200, null=True, default="*", help_text="多个用','分隔")
     SITE_HEADER = models.CharField('后台头部', max_length=200, null=True, default="后台管理系统")
+    SECRET_KEY = models.CharField('系统SECRET_KEY', max_length=200, null=True, default="G5M2X0fas@#@ef^sc)r^(_g+Ag")
     # 如果开起UpdateCacheMiddleware，FetchFromCacheMiddleware作为全站缓存使用
     CACHE_MIDDLEWARE_SECONDS = models.IntegerField("缓存时间", default=900, null=True, help_text="全站缓存的默认时间(需要加入cache中间件)，单位：秒")
     CACHE_MIDDLEWARE_KEY_PREFIX = models.CharField("缓存前缀", max_length=20, null=True, default="gmx", help_text="缓存key前缀")
@@ -38,6 +39,9 @@ class WebSettings(models.Model):
         for s in self.ALLOWED_HOSTS.split(","):
             ALLOWED_HOSTS += '"' + s.strip() + '", '
         config_text = '''# 本文件记录系统相关配置
+
+# 重新分配
+SECRET_KEY = "l*8!si1_0)23jy@+7o68t+&dnz^sc)r^tm0_efh=#=gh45&^ics3452345"
 
 FILE_UPLOAD_PERMISSIONS = 0o644  # 文件上传权限
 FILE_UPLOAD_MAX_MEMORY_SIZE = %s  # 最大文件上传size
