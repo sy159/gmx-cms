@@ -2,9 +2,6 @@
 本文件记录数据库相关配置
 """
 
-# 重新分配
-SECRET_KEY = "l*8!si1_0)23jy@+7o68t+&dnz^sc)r^tm0_efh=#=gh45&^ics3452345"
-
 # elasticsearch连接配置
 es_conf = {
     "host": "http://127.0.0.1:9200/",
