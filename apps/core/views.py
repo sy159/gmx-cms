@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 import os
+import time
 
 from django.http import Http404
 from django.http import HttpResponse
@@ -130,7 +131,7 @@ def file_system(request):
                         "file_name": file_name,
                         "is_dir": is_dir,
                         "file_size": "{}kb".format(os.path.getsize(file_path + "/" + file_name) // 1024) if not is_dir else "",
-                        "create": ""
+                        "create": time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(os.path.getctime(f"{file_path}/{file_name}")))
                     })
                 result["data"] = file_info_list
             return JsonResponse(result, safe=False)
