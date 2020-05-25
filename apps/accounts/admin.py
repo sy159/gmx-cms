@@ -48,4 +48,4 @@ class UserInfoAdmin(UserAdmin):
         qs = super(UserInfoAdmin, self).get_queryset(request)
         if request.user.username in ["root", ]:
             return qs
-        return qs.filter(user_info__tel=request.get_host())
+        return qs.filter(user_info__host=request.get_host())
