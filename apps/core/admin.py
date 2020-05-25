@@ -69,7 +69,7 @@ class SiteSettingAdmin(admin.ModelAdmin):
     list_filter = ['SITE_HOST', "SITE_NAME"]
 
     def has_delete_permission(self, request, obj=None):
-        if request.user.username in ["root", ]:assert
+        if request.user.username in ["root", ]:
             return True
         return False
 
