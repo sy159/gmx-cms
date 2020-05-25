@@ -5,8 +5,9 @@ import platform
 from collections import OrderedDict
 from collections import namedtuple
 
+from django.urls import reverse
 
-# 获取所有磁盘
+
 def disk_partitions(all=False):
     """Return all mountd partitions as a nameduple.
     If all == False return phyisical partitions only.
@@ -115,3 +116,15 @@ def sys_information():
                 "network": "-",
                 "space": "-",
                 "nginx": "-"}
+
+
+def admin_url(model, url, object_id=None):
+    """
+    Returns the URL for the given model and admin url name.
+    """
+    opts = model._meta
+    url = "admin:%s_%s_%s" % (opts.app_label, opts.object_name.lower(), url)
+    args = ()
+    if object_id is not None:
+        args = (object_id,)
+    return reverse(url, args=args)

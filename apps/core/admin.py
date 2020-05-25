@@ -1,6 +1,8 @@
 from django.contrib import admin
+from django.http import HttpResponseRedirect
 
 from apps.core.models import *
+from apps.core.utils import admin_url
 
 
 @admin.register(WebSettings)
@@ -11,7 +13,7 @@ class WebSettingsAdmin(admin.ModelAdmin):
                  ("邮箱配置", {"fields": ["EMAIL_HOST", "EMAIL_PORT", "EMAIL_SUBJECT_PREFIX", "EMAIL_HOST_USER", "EMAIL_HOST_PASSWORD", "EMAIL_USE_TLS"]}),
                  )
     radio_fields = {"DEBUG": admin.HORIZONTAL, "EMAIL_USE_TLS": admin.HORIZONTAL, "SESSION_EXPIRE_AT_BROWSER_CLOSE": admin.HORIZONTAL}
-    readonly_fields = ("SECRET_KEY", )
+    readonly_fields = ("SECRET_KEY",)
 
     # 部分参数设置只读功能
     def get_readonly_fields(self, request, obj=None):
@@ -34,6 +36,16 @@ class WebSettingsAdmin(admin.ModelAdmin):
         if request.user.username in ["root", ]:
             return True
         return False
+
+    # 视图列表（网站全局配置就一个，直接跳转到change页面）
+    def changelist_view(self, request, *args, **kwargs):
+        all_obj = WebSettings.objects.all()
+        if len(all_obj):
+            obj = all_obj[0]
+        else:
+            obj = WebSettings()
+            obj.save()
+        return HttpResponseRedirect(admin_url(WebSettings, "change", object_id=obj.id))
 
 
 @admin.register(SiteSetting)
