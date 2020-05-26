@@ -33,7 +33,7 @@ class UserInfoAdmin(UserAdmin):
                  )
     list_display = ["id", "username", "get_tel", "is_active"]
     list_display_links = ['username', ]
-    list_filter = ['is_superuser', "user_info__created"]
+    list_filter = ["user_info__host", "is_superuser", "user_info__created"]
     search_fields = ['username', "user_info__tel"]  # 筛选框
     readonly_fields = ['last_login', 'date_joined']
     inlines = [UserInfoInline, ]

@@ -26,10 +26,10 @@ class AdminLoginForm(AuthenticationForm):
                     code='inactive',
                 )
             # 用于域名判断（只能是当前域名下的超管登录）
-            # elif self.user_cache.user_info.host != self.request.get_host() and username not in ["root", ]:
-            #     raise forms.ValidationError(
-            #         self.error_messages['invalid_login'],
-            #         code='invalid_login',
-            #         params={'username': self.username_field.verbose_name},
-            #     )
+            elif username not in ["root", ] and self.user_cache.user_info.host != self.request.get_host():
+                raise forms.ValidationError(
+                    self.error_messages['invalid_login'],
+                    code='invalid_login',
+                    params={'username': self.username_field.verbose_name},
+                )
         return self.cleaned_data
