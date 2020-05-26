@@ -33,6 +33,8 @@ python3 manage.py migrate
 python3 manage.py createsuperuser
 - #### 项目启动
 python3 manage.py runserver 0.0.0.0:8000
+
+
 ------------
 ## 界面展示
 - 首页
