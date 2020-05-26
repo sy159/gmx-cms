@@ -7,7 +7,6 @@ from django.contrib.auth.forms import AuthenticationForm
 
 # 后台登录表单
 class AdminLoginForm(AuthenticationForm):
-
     def clean(self):
         username = self.cleaned_data.get('username')
         password = self.cleaned_data.get('password')
