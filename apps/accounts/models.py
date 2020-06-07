@@ -24,7 +24,7 @@ class UserInfo(models.Model):
 
     def save(self, *args, **kwargs):
         pass
-        super(UserInfo, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
 
 # 创建user与user_info关联

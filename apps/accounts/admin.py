@@ -45,7 +45,7 @@ class UserInfoAdmin(UserAdmin):
 
     # 只允许查看属于当前域名下的用户
     def get_queryset(self, request):
-        qs = super(UserInfoAdmin, self).get_queryset(request)
+        qs = super().get_queryset(request)
         if request.user.username in ["root", ]:
             return qs
         return qs.filter(user_info__host=request.get_host())

@@ -41,7 +41,7 @@ class WebSettings(models.Model):
         config_text = '''# 本文件记录系统相关配置
 
 # 重新分配
-SECRET_KEY = "l*8!si1_0)23jy@+7o68t+&dnz^sc)r^tm0_efh=#=gh45&^ics3452345"
+SECRET_KEY = "%s"
 
 FILE_UPLOAD_PERMISSIONS = 0o644  # 文件上传权限
 FILE_UPLOAD_MAX_MEMORY_SIZE = %s  # 最大文件上传size
@@ -83,19 +83,22 @@ EMAIL_HOST_PASSWORD = '%s'  # 授权码
 EMAIL_SUBJECT_PREFIX = '%s'  # 为邮件标题的前缀,默认是'[django]'
 EMAIL_USE_TLS = %s  # 开启安全链接
 DEFAULT_FROM_EMAIL = SERVER_EMAIL = EMAIL_HOST_USER  # 设置发件人
-''' % (str(self.FILE_UPLOAD_MAX_MEMORY_SIZE), str(self.CACHE_MIDDLEWARE_SECONDS), self.CACHE_MIDDLEWARE_KEY_PREFIX, self.DEBUG, ALLOWED_HOSTS, self.SITE_HEADER,
+''' % (self.SECRET_KEY, str(self.FILE_UPLOAD_MAX_MEMORY_SIZE), str(self.CACHE_MIDDLEWARE_SECONDS), self.CACHE_MIDDLEWARE_KEY_PREFIX, self.DEBUG, ALLOWED_HOSTS, self.SITE_HEADER,
        str(self.SESSION_COOKIE_SECONDS), self.SESSION_EXPIRE_AT_BROWSER_CLOSE, str(self.ACCESS_TOKEN_EXPIRE_SECONDS), str(self.AUTHORIZATION_CODE_EXPIRE_SECONDS), self.EMAIL_HOST,
        str(self.EMAIL_PORT), self.EMAIL_HOST_USER, self.EMAIL_HOST_PASSWORD, self.EMAIL_SUBJECT_PREFIX, self.EMAIL_USE_TLS)
         with open("mainsys/config.py", "w", encoding="utf-8") as f:
             f.write(config_text)
-        super(WebSettings, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
         # 重新加载代码(在uwsgi的ini文件中配置py-autoreload = 1  # 代码修改后自动重启)
 
 
 # 站点配置
 class SiteSetting(models.Model):
-    SITE_HOST = models.CharField('站点域名', max_length=50, null=True)
+    theme = (("default", "默认"), ("blue", "蓝色"))
+    SITE_HOST = models.CharField('站点域名', max_length=50, null=True, unique=True)
     SITE_NAME = models.CharField('系统名称', max_length=50, null=True, blank=True, default='如何好听')
+    SYSTEM_THEME = models.CharField('系统主题', max_length=50, null=True, blank=True, choices=theme, default="default")
+    HOME_URL = models.CharField('首页url', max_length=50, null=True, blank=True, default="", help_text="url不需要带域名，示例:'/index/about/'")
     COMPANY_NAME = models.CharField('公司名称', max_length=50, null=True, blank=True, default='如何好听')
     COMPANY_INFO = models.CharField('公司简介', max_length=50, null=True, blank=True, default='猪猪女孩')
     COMPANY_ADDRESS = models.CharField('公司地址', max_length=50, null=True, blank=True, default='重庆市')
@@ -110,3 +113,31 @@ class SiteSetting(models.Model):
 
     def __str__(self):
         return '%s-个性设置' % self.SITE_HOST
+
+    @staticmethod
+    def change_site_config():
+        site_objs = SiteSetting.objects.all()
+        site_dict = dict()
+        for site_obj in site_objs:
+            site_dict[site_obj.SITE_HOST] = {
+                "site_name": site_obj.SITE_NAME or "如何好听",
+                "system_theme": site_obj.SYSTEM_THEME or "default",
+                "home_url": site_obj.HOME_URL or "",
+                "company_name": site_obj.COMPANY_NAME or "如何好听",
+                "company_info": site_obj.COMPANY_INFO or "gmx",
+                "company_addr": site_obj.COMPANY_ADDRESS or "重庆",
+                "company_icp": site_obj.COMPANY_ICP or "",
+                "qq": site_obj.QQ or "1138559515",
+                "tel": site_obj.TEL or "187****2553",
+            }
+        webconfig_str = f'# 本文件记录多域名配置\n\nsite_conf = {site_dict}\n'
+        with open("mainsys/webconfig.py", "w", encoding="utf-8") as f:
+            f.write(webconfig_str)
+
+    def save(self, *args, **kwargs):
+        SiteSetting.change_site_config()
+        super().save()
+
+    def delete(self, using=None, keep_parents=False):
+        SiteSetting.change_site_config()
+        super().delete()

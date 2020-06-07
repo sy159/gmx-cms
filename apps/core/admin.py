@@ -61,7 +61,7 @@ class WebSettingsAdmin(admin.ModelAdmin):
 
 @admin.register(SiteSetting)
 class SiteSettingAdmin(admin.ModelAdmin):
-    fieldsets = (("站点信息", {"fields": ["SITE_HOST", "SITE_NAME"]}),
+    fieldsets = (("站点信息", {"fields": ["SITE_HOST", "SITE_NAME", "HOME_URL", "SYSTEM_THEME"]}),
                  ("公司信息", {"fields": ["COMPANY_NAME", "COMPANY_INFO", "COMPANY_ADDRESS", "COMPANY_ICP", "QQ", "TEL"]}),
                  )
     list_display = ['SITE_HOST', 'SITE_NAME', 'COMPANY_NAME']
@@ -75,7 +75,7 @@ class SiteSettingAdmin(admin.ModelAdmin):
 
     # 只允许查看属于当前域名下的用户
     def get_queryset(self, request):
-        qs = super(SiteSettingAdmin, self).get_queryset(request)
+        qs = super().get_queryset(request)
         if request.user.username in ["root", ]:
             return qs
         return qs.filter(SITE_HOST=request.get_host())
