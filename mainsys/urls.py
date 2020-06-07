@@ -17,7 +17,7 @@ admin.site.login_form = AdminLoginForm  # 源码提供login_form自定义登录�
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'media/(?P<path>.*)', serve, {"document_root": MEDIA_ROOT}),  # 查看媒体文件
+    re_path('media/(?P<path>.*)', serve, {"document_root": MEDIA_ROOT}),  # 查看媒体文件
     path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),  # 用于oauth2授权
     path('', home, name='home'),  # home
     re_path('index/(?P<page>.+)/', index, name='index_page')  # /index/about/  or /index/.../

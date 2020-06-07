@@ -13,7 +13,7 @@ class WebSettingsAdmin(admin.ModelAdmin):
                  ("邮箱配置", {"fields": ["EMAIL_HOST", "EMAIL_PORT", "EMAIL_SUBJECT_PREFIX", "EMAIL_HOST_USER", "EMAIL_HOST_PASSWORD", "EMAIL_USE_TLS"]}),
                  )
     radio_fields = {"DEBUG": admin.HORIZONTAL, "EMAIL_USE_TLS": admin.HORIZONTAL, "SESSION_EXPIRE_AT_BROWSER_CLOSE": admin.HORIZONTAL}
-    readonly_fields = ["SECRET_KEY",]
+    readonly_fields = ["SECRET_KEY", ]
     only_special_user_fields = [("高级设置", {"fields": ["SECRET_KEY"]})]  # 只有特殊用户能看字段，配合get_fieldsets使用
 
     # 部分参数设置只读功能
@@ -54,7 +54,7 @@ class WebSettingsAdmin(admin.ModelAdmin):
         """
         if self.fieldsets:
             if request.user.username in ["root"]:
-                return  tuple(list(self.fieldsets) + self.only_special_user_fields)
+                return tuple(list(self.fieldsets) + self.only_special_user_fields)
             return self.fieldsets
         return [(None, {'fields': self.get_fields(request, obj)})]
 
